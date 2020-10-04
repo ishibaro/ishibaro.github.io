@@ -2,13 +2,15 @@
 <!-- At some point I will post this exercise to Observable -->
 <!--
 
+To find out more https://ishiba.blogspot.com
+
 SPANISH 
 
 Los datos se obtienen de JHU - CSSEGISandData / COVID-19, pero han sido pre-procesados usando Google Sheets. La página de acumulación, análisis y procesamiento de datos preliminar es esta https://docs.google.com/spreadsheets/d/1Ul4tvRDIRKHbLpkNfEiLyIhzjMzRq8QtRvRlYW3KKI4/#gid=77523082
 
 Se utilizó un nuevo archivo para procesar de forma recurrente los datos en forma de matriz al formato lista. Esa tabla, está disponible aquí https://docs.google.com/spreadsheets/d/10kUoWa61wWKX38PepCiV1WT-xty-AHh0P_Sge9GGaIo/
 
-La tabla se actualizará en GitHub cada mes, este ejercicio maneja la tabla con corte al 20 de septiembre de 2020.
+La tabla se actualizará en GitHub cada mes, este ejercicio maneja la tabla con corte al 4 de octubre de 2020.
 
 
 ENGLISH
@@ -18,7 +20,7 @@ https://docs.google.com/spreadsheets/d/1Ul4tvRDIRKHbLpkNfEiLyIhzjMzRq8QtRvRlYW3K
 
 A new file was used to process new data iteratively such that array data is transformed into a list. This table is available here: https://docs.google.com/spreadsheets/d/10kUoWa61wWKX38PepCiV1WT-xty-AHh0P_Sge9GGaIo/
 
-The table will be updated in GitHub every month. This exercise uses a table with dates updated until the 20th of september.
+The table will be updated in GitHub every month. This exercise uses a table with dates updated until the 4th of October, 2020.
 _______________________
 
 Israel Hinojosa Baliño - 
@@ -30,7 +32,20 @@ Israel Hinojosa Baliño -
 <!-- Fonts Saira also comes in 4 widths -->
 <link href="https://fonts.googleapis.com/css?family=Saira|Saira+Condensed|Saira+Extra+Condensed|Saira+Semi+Condensed" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Aldrich|Arima+Madurai|Arvo|Henny+Penny|Indie+Flower|Libre+Baskerville|Pirata+One|Poiret+One|Sancreek|Satisfy|Share+Tech+Mono|Smokum|Snowburst+One|Special+Elite" rel="stylesheet">
+
+<meta name="title" content="Covid-19 heatmap: tracking the pandemic curves with colours">
+<meta name="description" content="Tracking the flattening of the curve during the Covid19 (Coronavirus) pandemic. A visualization proposal.">
+<meta name="keywords" content="covid-19, pandemic, heatmap, curves, flattening the curve, SARS-CoV-2, colours">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="revisit-after" content="20 days">
+<meta name="author" content="Israel Hinojosa Baliño">
+	
+<title>
+Ishiba Git.io</title>
 </head>
+
 <meta charset="utf-8">
 
 <!-- Load d3.js -->
@@ -60,7 +75,7 @@ var svg = d3.select("#my_dataviz")
         "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("https://raw.githubusercontent.com/ishibaro/dataviz/master/caseslistCovidMonthlyUpdate20Septiembre2020.csv", 
+d3.csv("https://raw.githubusercontent.com/ishibaro/dataviz/master/caseslistCovidMonthlyUpdate04October2020.csv", 
 
 function(data) {
 
