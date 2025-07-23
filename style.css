@@ -1,0 +1,571 @@
+
+* {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+display: flex;
+  flex-direction: column;
+}
+
+body.light-theme {
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=ffffff&c2=4c01a0&gt=r&gd=dbb
+*/
+background: rgba(255, 255, 255, 1.0);
+background: radial-gradient(at center bottom, rgb(171, 192, 192), rgb(223, 209, 240));
+    color: #f0f0f0;
+}
+
+body.dark-theme {
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=010101&c2=140129&gt=r&gd=dbb
+*/
+background: rgba(1, 1, 1, 1.0);
+background: radial-gradient(at center bottom, rgba(1, 1, 1, 1.0), rgb(33, 3, 66));
+    color: #f0f0f0;
+}
+
+/* Header styles */
+
+header {
+  background: url('assets/headerthinB.png') no-repeat top center;
+
+}
+
+header.light-theme {
+    background-color: #cecfff;
+    padding: 1rem;
+}
+
+header.dark-theme {
+    background-color: #1e0fc3;
+    padding: 1rem;
+}
+
+
+
+/* USe the descendant combinator/selector relationship  */
+
+.topnav {
+    /* makes nav links display in a row, I tried to use Chromostereopsis */
+    background: #3629cb;
+    overflow:hidden;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    /* wrap items in small screen  */
+    justify-content:center;
+    gap: 0.2rem;
+        border-radius: 0px 0px 0px 0px;
+}
+
+.topnav a.active {
+  background-color: #3629cb;
+  font-weight:600;
+  font-family: "Lato", sans-serif;
+}
+
+/* this is to style all anchor tag elements "a"  */
+.topnav a{
+    /* removes the underline on the acnchor tag text */
+    float: left;
+    display: block;
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border: 0 px solid #fff;
+    border-radius: 8px 8px 0px 0px;
+    margin-right: 0.5px;
+    transition:  background 0.3s;
+    background: #4C01A0;
+    z-index: 99;
+}
+
+.topnav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #959595;
+}
+
+/* header nav a:hover is a compound selector
+and a:hover on its own is pseudo-element selector*/
+.topnav a:hover {
+    background: rgb(245, 207, 255);
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+#yellow {
+margin-left: auto;
+justify-content:center;
+}
+
+/* .main {
+  background-color: darkolivegreen;
+  color: white;
+} */
+
+/* .side {
+  background-color: grey;
+  color: white;
+} */
+
+/* ! CSS GRID CODE BELOW: */
+
+/* * Similar to flexbox the majority of CSS Grid properties are applied to a parent element or container element */
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.hatched-text{
+  display: inline-block; /* Ensures the background fits the text width */
+  color: #ff0000; /* Text color */
+  padding: 2px 4px; /* Optional padding for better visibility */
+  }
+
+.subtitle-text{
+  display: inline-block; /* Ensures the background fits the text width */
+  color: white; /* Text color */
+  padding: 2px 4px; /* Optional padding for better visibility */
+  font-weight:600;
+  font-family: "Lato", sans-serif;
+  }
+
+.main {
+  background-color: #3629cb;
+  padding: 10px;
+}
+
+.main.top {
+  z-index: 9;
+  border-radius: 0px 0px 0px 0px;
+
+}
+
+.main.content {
+  border-radius: 10px 10px 10px 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(197, 213, 215);
+  width: 50%;
+  margin: 10px;
+  align-self: flex-start;
+  padding: 5px;
+  order: 0;
+  flex-grow: 10;
+  flex-shrink: 1;
+}
+
+
+/* for images accompanying the main */
+.sidetop {
+  background-color: rgb(191, 192, 182);
+  color: white;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  order: 1;
+  align-self: flex-start;
+  flex-grow: 0;
+  flex-shrink: 100;
+  margin: 10px;
+} 
+
+img.sidetop {
+  border-radius: 10px;
+  width: 10.5em;;
+  padding: 5px;
+}
+
+.bottom {
+  color: rgb(25, 21, 21);
+  background-color: rgb(197, 213, 231);
+  border-radius: 10px;
+    margin: 10px;
+  padding: 10px;
+  order: 3;
+  align-self: flex-end;
+  flex-grow: 10;
+  flex-shrink: 10;
+
+}
+
+
+.foot {
+  text-align: center;
+  background-color: rgb(229, 205, 252);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+blockquote {
+  font-style:normal;
+  margin-left:32px;
+  font-family:"Segoe Print", "Times New Roman", Verdana;
+  padding-left: 48px;
+  background: url('assets/Quotation-Mark.png');
+ background-repeat:no-repeat;
+ background-size: 50px;
+  min-height: 30px;  
+}
+
+.dynamicc {
+    display: flex;
+    border: 3px solid black;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    /* Try other values by commenting/uncommenting: */
+    /* justify-content: space-around; */
+    /* justify-content: flex-start; */
+    /* justify-content: center; */
+    /* justify-content: flex-end; */
+}
+
+.boxd {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    height: 100%;
+    display: flex; /* YOU MUST ADD THIS LINE TO MAKE TEH ALIGNMENT WORK */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-flow: column wrap;
+}
+
+.boxd1 {
+    /* flex-basis: 100%; */
+    background-color: rgb(160, 142, 179);
+    flex-grow: 10;
+    flex-shrink: 1;
+    justify-content: center;
+
+}
+
+.boxd2 {
+    /* flex-basis: 25%; */
+    background-color: rgb(186, 161, 128);
+    flex-grow: 10;
+    flex-shrink: 1;
+    justify-content: center;
+}
+
+.boxd3 {
+    /* flex-basis: 45%; */
+    background-color: rgb(180, 143, 117);
+    flex-shrink: 1;
+    flex-grow: 10;
+    justify-content: center;
+}
+
+
+table {
+  margin: 25px;
+  color: #aaa99e;
+  width: 50%;
+}
+
+th, td {
+  border:2px solid rgb(83, 75, 75);
+  border-style: dotted;
+  border-radius: 10px;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+}
+
+tr:hover {background-color: #444848;}
+
+table:ntr-child(even), th:ntr-child(even) {
+  background-color: #547979;
+}
+
+section.mycontainer {
+  width:auto;
+  overflow: auto;
+}
+section.mycontainer section {
+  width:45%;  
+  /* float:left; */
+  padding: 10px;
+  display: inline-block;
+}
+
+h1 {
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size:3.5vw;
+  }
+
+h2 {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-size: x-large;
+  margin: 10px 10px 10px 10px;
+}
+
+h3 {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-size: large;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: large;
+}
+
+a {
+  font-family: "Lato", sans-serif;
+  color: rgb(255, 81, 0);
+  text-decoration: none;
+  font-size: larger;
+  font-weight: bold;
+}
+
+a:hover {
+  color: rgb(255, 98, 0);
+  text-decoration: none;
+}
+
+#left {
+  background-color:#2f3732;
+}
+
+#right {
+  background-color:#2f2e26;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+}
+
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background-color: #f1f1f1;
+}
+
+li a {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 500;
+  display: block;
+  color: #000;
+  padding: 8px 5px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.nav {
+  background-color: rgb(53, 53, 41); 
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 15px;
+}
+
+img {
+  object-fit: fill;
+
+}
+
+/* Nested box models */
+
+/* Standard section flex box*/
+
+.flex-standard{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+
+.flex-standard > div {
+  background-color: DodgerBlue;
+  color: white;
+  width: 200px;
+  margin: 10px;
+  line-height: 25px;
+  font-weight: 450;
+  border: 3px dashed rebeccapurple;
+  text-align: center;
+  padding-bottom:25px ;
+  color: #2f2e26;
+  border-radius: 10px;
+}
+
+.flex-standard > div.normal {
+  background-color: rgb(212, 255, 201);
+  width: fit-content;
+  padding: 10px;
+}
+
+/* .cards {
+      font-weight: 450;
+    border: 3px dashed rebeccapurple;
+    text-align: center;
+    padding-bottom:50px ;
+    color: #2f2e26;
+    border-radius: 10px;
+} */
+
+/* On mouse-over, add a deeper shadow */
+.flexbox-standard > div:hover {
+  box-shadow: 0 8px 16px 0 rgb(211, 7, 7);
+}
+
+/* Optional: Individual styling for each nested box */
+#model1 {
+  background-color: rgb(206, 206, 226) ;
+}
+#model2 {
+  background-color: rgb(216, 193, 193);
+}
+#model3 {
+  background-color: rgb(229, 229, 190);
+}
+#model4 {
+  background-color: rgb(196, 221, 196) ;
+}
+#model5 {
+  background-color: rgb(211, 196, 221) ;
+}
+
+/* theme button */
+#toggleThemeBtn {
+  background: transparent;
+  cursor: pointer;
+}
+
+#toggleThemeBtn:hover ~ nav{
+    background: rgb(105, 122, 122);
+}
+
+/* quick mapbox */
+#map {
+  /* position: absolute; */
+  /* top: 0;
+  bottom: 0; */
+  width: 100%;
+  height: 500px;
+  border-radius: 5%;
+  /* I used this color just to pick html colours, but can be erased */
+  color: #ff0000;
+}
+
+
+/* test for checkbox */
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+span {
+  position: relative;
+  padding-top: 4px;
+  margin-top: 4px;
+}
+
+.checkbox-label {
+  background-color: #111;
+  width: 48px;
+  height: 24px;
+  border-radius: 30px;
+  position: relative;
+  padding: 2px;
+  cursor:pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {color: #f1c40f;}
+
+.fa-sun {color: #f39c12;}
+
+.checkbox-label .ball {
+  background-color: hsla(98, 100%, 50%, 0.75);
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 0px;
+  top: -3.5px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius:15%;
+  padding: 1%;
+  background-color: rgb(239, 228, 251);
+  margin: 1%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}

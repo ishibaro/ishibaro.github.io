@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.js"></script>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
     <script src="https://kit.fontawesome.com/fd285000eb.js" crossorigin="anonymous"></script>
@@ -20,10 +22,10 @@
     <div class="container">
       <!-- Navigation links scroll to respective page sections -->
       <nav class="topnav" id="myTopnav">
-      <a class="active" href="./index.html">Home</a>
+      <a href="./index.html">Home</a>
       <a href="./services.html">Services</a>
       <a href="./profile.html">Profile</a>
-      <a href="./portfolio.html">Portfolio</a>
+      <a class="active" href="./portfolio.html">Portfolio</a>
       <a id="yellow" href="./contact.html">Contact</a>
       <a hidden>
       <input type="checkbox" class="checkbox" id="checkbox">
@@ -45,19 +47,80 @@
         
       </div>
       <div class="main content">
-        <h2>Who am I?</h2>
-Mexican archaeologist specialised in landscapes, urbanism, politics, and the Middle East; open-source enthusiast, software developer, and creative writer. 
-<br>
-I’ve experience in Mexico, Egypt, Kuwait and the US. My work integrates archaeology excavation and survey, GIS, computational methods and data science to study human interactions with landscapes. I am a writer and coder, sharing interests in fantasy and science fiction writing, as well as Python and R scripts.
-<br><br>
-<blockquote>
-<p>By the time you’re my age, you’ll realize that everything you once thought mattered so much turns out to mean very little.</p>
-<footer>
-  —  <cite>Liu Cixin, The Three-Body Problem</cite>
-</footer>
-</blockquote>
-<br>
-        <br>      
+        <section class="flex-standard">
+        <!-- content -->
+          <div class="normal">
+            <h2>
+              Custom Mapbox map with tileset_data
+            </h2>
+            <div id="map"></div></div>
+            <br>
+
+          <!-- content -->
+          <div class="normal">
+              <h2>
+              ArKalc
+              </h2>
+              <img class="sidetop" src="./assets/arkalc/00.jpg" alt="ArKalc screens are shown">
+              <br>
+              <img class="sidetop" src="./assets/arkalc/04.jpeg" alt="ArKalc splash and intro screen">
+              <br>
+              -Calculate hypotenuse for grid
+              <br>
+              -Get coordinates and celestial info
+              <br>
+              -Compass bearing
+              <br>
+          </div>
+
+          <!-- content -->
+          <div class="normal">
+            <h2>
+            Temporal Database
+            </h2>
+            -PostgreSQL
+            <br>
+            -MySQL (for storing user access)
+            <br>
+            -PHP
+            <br>
+            -Javascript
+            <br>
+            -Google Maps API
+            <br>
+            <a href="https://ishiba.alwaysdata.net/welcome.php">Link</a>
+            <br>
+          </div>
+
+          <!-- content -->
+          <div class="normal">
+            <h2>
+            Check out a A visualization proposal 
+            </h2>
+            <a href="https://ishibaro.github.io/HeatMapcovid19/horizontalHeatMapcovid19_wrkng.html">Tracking the "flattening" of the curve during the Covid19 ("Coronavirus") pandemic.</a>
+            <br>
+          </div>
+
+          <!-- content -->
+          <div class="normal">
+            <h2>
+            #30DayMapChallenge
+            </h2>
+            <a href="https://ishibaro.github.io/30daymapchallengegallery/"> Collection (2021)</a>
+            <br>
+          </div>
+
+          <!-- content -->
+          <div class="normal">
+            <h2>
+            Earthquakes in Mexico
+            </h2>
+            <a href="https://ishibaro.github.io/sismosMX/sismo.html">Report on earthquakes in Mexico (2022)</a>
+            <br>
+          </div>
+
+          
+  </section>
       </div>
       <div class="bottom">
         <div class="dynamicc">

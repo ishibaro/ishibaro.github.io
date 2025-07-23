@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <p>Here are my details if you want to contact me:</p>
+    <table style="width:600px">
+        <caption>My details</caption>
+        <tr>
+            <th>Name</th>
+            <th>email</th>
+            <th><img src="./assets/twitter-round.svg" width="25" alt="Twitter icon, now X"></th>
+        </tr>
+        <tr>
+            <td>Ishiba</td>
+            <td><a href="mailto:IshibaHinojosa-Balino.bootcamp@justit.co.uk"> ishiba@justit </a></td>
+            <td>@ishiba</td>
+        </tr>
+    </table></div></div>
+<p></p> <br />
+    <br />
+    <p>You can also send me a message if you require further information</p>
+<form action="confirmation.html">
+    <p>What is the purpose of your message?</p>
+    <input type="radio" id="quote" name="purpose" value="q">
+    <label for="age1">Quote</label><br>
+    <input type="radio" id="greet" name="purpose" value="g">
+    <label for="age2">Greetings</label><br>  
+    <input type="radio" id="Other" name="purpose" value="o">
+    <label for="age3">Other</label>
+    <br /><br />
+    <label for="email">Email</label>
+    <input type="email" name="email" id="user">
+    <label for="cars">What kind of person are you:</label>
+      <select name="person" id="person">
+        <option value="customer">Customer</option>
+        <option value="company">Company</option>
+        <option value="donor">Donor</option>
+        <option value="curious">Curious</option>
+      </select>
+    <!-- ! Text Area -->
+    <br /><br />
+      <label for="profile">Type your message:</label>
+      <br /><br />
+      <textarea name="userProfile" id="profile"></textarea>
+<input type="submit" value="Send" />
+    </form>
+</body>
+</html>
