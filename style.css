@@ -36,7 +36,12 @@ background: radial-gradient(at center bottom, rgba(1, 1, 1, 1.0), rgb(33, 3, 66)
 
 header {
   background: url('assets/headerthinB.png') no-repeat top center;
+  height: 100px;
+}
 
+header h1{
+  margin-left: 40px;
+  margin-top: 18px;
 }
 
 header.light-theme {
@@ -333,7 +338,7 @@ h1 {
   font-family: "Zen Dots", sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size:3.5vw;
+  font-size: 5dvb;
   }
 
 h2 {
