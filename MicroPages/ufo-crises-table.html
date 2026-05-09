@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UFO Sightings & U.S. Crises</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #04070f;
+    --panel: #080e1a;
+    --border: #1a3a5c;
+    --glow: #00d4ff;
+    --glow2: #ff3e6c;
+    --text: #c8e6f0;
+    --muted: #4a7a96;
+    --accent: #00ffc8;
+    --row-hover: rgba(0, 212, 255, 0.06);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Share Tech Mono', monospace;
+    min-height: 100vh;
+    padding: 2rem 1rem 3rem;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 20% 10%, rgba(0,212,255,0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 40% at 80% 90%, rgba(255,62,108,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* scanlines */
+  body::after {
+    content: '';
+    position: fixed; inset: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 3px,
+      rgba(0,0,0,0.18) 3px,
+      rgba(0,0,0,0.18) 4px
+    );
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--glow);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+  }
+
+  h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.2rem, 4vw, 2.2rem);
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 30px var(--glow), 0 0 60px rgba(0,212,255,0.3);
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+  }
+
+  h1 span { color: var(--glow); }
+
+  .subtitle {
+    margin-top: 0.6rem;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .table-wrap {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0,212,255,0.08), inset 0 0 0 1px rgba(0,212,255,0.04);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.78rem;
+  }
+
+  thead tr {
+    background: linear-gradient(90deg, #061525, #091e30);
+    border-bottom: 2px solid var(--glow);
+  }
+
+  th {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--glow);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  th.crisis-col { color: var(--glow2); }
+
+  tbody tr {
+    border-bottom: 1px solid rgba(26,58,92,0.5);
+    transition: background 0.2s;
+    cursor: default;
+  }
+
+  tbody tr:last-child { border-bottom: none; }
+
+  tbody tr:nth-child(odd)  { background: rgba(4,12,22,0.6); }
+  tbody tr:nth-child(even) { background: rgba(6,16,28,0.6); }
+
+  tbody tr:hover { background: var(--row-hover); }
+
+  td {
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+    line-height: 1.55;
+    color: var(--text);
+  }
+
+  td.year {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+  }
+
+  .ufo-badge {
+    display: inline-block;
+    background: rgba(0,212,255,0.1);
+    border: 1px solid rgba(0,212,255,0.3);
+    color: var(--glow);
+    border-radius: 2px;
+    padding: 0.1em 0.45em;
+    font-size: 0.72em;
+    letter-spacing: 0.1em;
+    margin-top: 0.15rem;
+  }
+
+  .spike { color: var(--accent); font-weight: bold; }
+  .crisis-text { color: #e8a0b0; }
+
+  .note {
+    margin-top: 1.5rem;
+    font-size: 0.65rem;
+    color: var(--muted);
+    text-align: center;
+    letter-spacing: 0.08em;
+    line-height: 1.7;
+  }
+
+  .corner-mark {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.5rem;
+    color: rgba(0,212,255,0.25);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-top: 0.3rem;
+  }
+
+  @media (max-width: 640px) {
+    td, th { padding: 0.6rem 0.5rem; font-size: 0.7rem; }
+    h1 { font-size: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <p class="eyebrow">Declassified Data Analysis</p>
+    <h1>UFO SIGHTINGS <span>&</span> U.S. CRISES</h1>
+    <p class="subtitle">Correlation timeline · 1947 – 2024</p>
+  </header>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Year(s)</th>
+          <th>UFO Sighting Activity</th>
+          <th class="crisis-col">U.S. Crisis / Context</th>
+          <th>Possible Link?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="year">1947</td>
+          <td><span class="spike">▲ SPIKE</span><br>Kenneth Arnold sighting; Roswell crash report<br><span class="ufo-badge">850+ reports</span></td>
+          <td class="crisis-text">Start of Cold War; nuclear anxiety post-WWII; Berlin tensions</td>
+          <td>Public fear of Soviet tech & atomic age fuels sky-watching</td>
+        </tr>
+        <tr>
+          <td class="year">1952</td>
+          <td><span class="spike">▲ SPIKE</span><br>Washington D.C. flyover — UFOs on radar over Capitol<br><span class="ufo-badge">Record reports</span></td>
+          <td class="crisis-text">Korean War peak; Red Scare; McCarthy hearings begin</td>
+          <td>Paranoia at maximum; public primed to see threats in the sky</td>
+        </tr>
+        <tr>
+          <td class="year">1957</td>
+          <td>Elevated sightings; Levelland, TX mass encounter</td>
+          <td class="crisis-text">Sputnik launch shocks America; Space Race begins</td>
+          <td>Real objects in orbit normalize the idea of craft in the sky</td>
+        </tr>
+        <tr>
+          <td class="year">1966–1969</td>
+          <td><span class="spike">▲ SPIKE</span><br>Project Blue Book overwhelmed; Michigan "Swamp Gas" controversy<br><span class="ufo-badge">~15k reports</span></td>
+          <td class="crisis-text">Vietnam War escalation; MLK & RFK assassinations; Civil unrest; Nixon era</td>
+          <td>Deep distrust of government; conspiracy thinking surges</td>
+        </tr>
+        <tr>
+          <td class="year">1973</td>
+          <td><span class="spike">▲ SPIKE</span><br>Pascagoula abduction; wave of Southern US sightings</td>
+          <td class="crisis-text">Watergate scandal; OPEC oil embargo; economic recession</td>
+          <td>Institutional collapse drives search for external explanations</td>
+        </tr>
+        <tr>
+          <td class="year">1989–1991</td>
+          <td>Belgian UFO wave; Hudson Valley sightings; military reports rise</td>
+          <td class="crisis-text">Savings & Loan crisis; Gulf War I; USSR collapse</td>
+          <td>Geopolitical reshuffling; classified military tests increase</td>
+        </tr>
+        <tr>
+          <td class="year">1997</td>
+          <td><span class="spike">▲ SPIKE</span><br>Phoenix Lights — witnessed by thousands; mass event</td>
+          <td class="crisis-text">Asian financial crisis begins; Clinton scandal brewing</td>
+          <td>Internet age amplifies mass reporting; media sensationalism peaks</td>
+        </tr>
+        <tr>
+          <td class="year">2001</td>
+          <td>Sightings spike post-September; restricted airspace confusion</td>
+          <td class="crisis-text">9/11 attacks; War on Terror declared</td>
+          <td>Heightened sky awareness; military flight restrictions cause misidentifications</td>
+        </tr>
+        <tr>
+          <td class="year">2007–2009</td>
+          <td>AATIP (secret Pentagon program) active; military pilot encounters</td>
+          <td class="crisis-text">Global Financial Crisis; housing crash; Great Recession</td>
+          <td>Secret defense spending surges; black-budget UAP research peaks</td>
+        </tr>
+        <tr>
+          <td class="year">2020</td>
+          <td><span class="spike">▲ SPIKE</span><br>Pentagon officially releases UAP videos (Tic Tac, Go Fast, Gimbal)<br><span class="ufo-badge">7,000+ NUFORC reports</span></td>
+          <td class="crisis-text">COVID-19 pandemic; racial justice protests; election crisis</td>
+          <td>Empty skies (fewer planes) → easier to spot anomalies; social anxiety peaks</td>
+        </tr>
+        <tr>
+          <td class="year">2021–2023</td>
+          <td><span class="spike">▲ SPIKE</span><br>UAP Task Force; Congress hearings; whistleblower testimony (Grusch)<br><span class="ufo-badge">Mainstream legitimacy</span></td>
+          <td class="crisis-text">Inflation crisis; Ukraine war; political polarization; debt ceiling standoffs</td>
+          <td>Government officially investigating; public interest reaches all-time high</td>
+        </tr>
+        <tr>
+          <td class="year">2024</td>
+          <td>NJ/NY drone swarms; AARO reporting portal goes public</td>
+          <td class="crisis-text">Election year tensions; Middle East conflict; economic uncertainty</td>
+          <td>Drone proliferation causes genuine ambiguity; classified testing ongoing</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="note">
+    Sources: NUFORC, MUFON, Project Blue Book archives, U.S. Congressional UAP hearings, NASA UAP report (2023)<br>
+    <span class="corner-mark">⚠ Correlation does not imply causation · Data compiled for informational purposes</span>
+  </p>
+</div>
+</body>
+</html>
