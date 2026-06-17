@@ -1,42 +1,67 @@
-// Select the toggle button
+// ==========================================
+// 1. GESTIÓN DE TEMAS (DARK / LIGHT)
+// ==========================================
 const toggleThemeBtn = document.getElementById('toggleThemeBtn');
+const checkbox = document.getElementById('checkbox'); // <-- Agregado para corregir el ReferenceError
 
-// Function to read from localStorage and apply the appropriate theme
 const applyStoredTheme = () => {
-    // Get saved theme or default to "light"
     const savedTheme = localStorage.getItem('theme') || 'dark';
-
-    // Clear any previously applied theme class
     document.body.classList.remove('light-theme', 'dark-theme');
-
-    // Apply the saved theme
     document.body.classList.add(`${savedTheme}-theme`);
-
-    // Update the toggle button text to reflect current theme
-    // toggleThemeBtn.innerHTML =
-    //     savedTheme === 'dark' ? '<button id="toggleThemeBtn" class="fa-solid fa-sun" style="border-radius: 50%;border: 0; border-style: none; background: transparent; color: #FFD43B">' : '<button id="toggleThemeBtn" class="fa-regular fa-moon" style="border-radius: 50%;border: 0; border-style: none; color: B197FC; background: transparent;">';
+    
+    // Sincronizar el estado físico del checkbox si existe en la página
+    if (checkbox) {
+        checkbox.checked = (savedTheme === 'dark');
+    }
 };
 
-// Challenge:
-// Change the icon on the button to (e.g., ☀️ for light, 🌙 for dark) based on the current theme.
-// When the button is clicked, toggle theme and save new value
-checkbox.addEventListener('click', () => {
-    const isDark = document.body.classList.contains('dark-theme');
-    const newTheme = isDark ? 'light' : 'dark';
+if (checkbox) {
+    checkbox.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark-theme');
+        const newTheme = isDark ? 'light' : 'dark';
+        localStorage.setItem('theme', newTheme);
+        applyStoredTheme();
+    });
+}
 
-    // Save new theme to localStorage
-    localStorage.setItem('theme', newTheme);
+// ==========================================
+// 2. SISTEMA MULTI-IDIOMA PERSISTENTE
+// ==========================================
+function setLanguage(lang) {
+    // Guardar la elección en el almacenamiento del navegador
+    localStorage.setItem('selectedLanguage', lang);
 
-    // Apply updated theme
+    // Aplicar el atributo al body para que el CSS actúe de inmediato
+    document.body.setAttribute('data-lang', lang);
+    
+    // Actualizar dinámicamente las clases activas en los botones del menú
+    const buttons = document.querySelectorAll('.nav-lang-btn');
+    buttons.forEach(btn => {
+        if (btn.innerText.trim().toLowerCase() === lang.toLowerCase()) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+}
+
+// Inicialización global al cargar cualquier documento
+document.addEventListener('DOMContentLoaded', () => {
     applyStoredTheme();
+    
+    // Recuperar el idioma guardado o usar inglés por defecto
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    setLanguage(savedLang);
 });
 
-// Apply theme as soon as the DOM is ready
-document.addEventListener('DOMContentLoaded', applyStoredTheme);
-
-
+// ==========================================
+// 3. MAPBOX (Protegido contra páginas sin mapa)
+// ==========================================
 // Mapbox
-mapboxgl.accessToken = 'pk.eyJ1IjoiaXNoaWJhIiwiYSI6ImNqM2QxZ2VsazAwMHAzM2x0bmhyMjBhdW4ifQ.f9v5x7x467AttWvjwrtLUg';
+
+if (document.getElementById('map')) {
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaXNoaWJhIiwiYSI6ImNqM2QxZ2VsazAwMHAzM2x0bmhyMjBhdW4ifQ.f9v5x7x467AttWvjwrtLUg';
+
     const map = new mapboxgl.Map({
         container: 'map',
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
@@ -205,12 +230,14 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiaXNoaWJhIiwiYSI6ImNqM2QxZ2VsazAwMHAzM2x0bmhyM
         );
 
         });
-    
-    function ResponsiveNav() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
+    }
+
+// Menu Responsivo
+function ResponsiveNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
 }

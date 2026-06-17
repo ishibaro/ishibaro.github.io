@@ -12,6 +12,10 @@ display: flex;
   flex-direction: column;
 }
 
+/* idioma */
+body[data-lang="en"] [lang="es"] { display: none !important; }
+body[data-lang="es"] [lang="en"] { display: none !important; }
+
 body.light-theme {
 /*
 * Created with https://www.css-gradient.com
@@ -574,4 +578,72 @@ span {
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+/* ── Controles Unificados en el Menú ── */
+.nav-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 16px;
+    vertical-align: middle;
+}
+
+/* Contenedor mini de idioma */
+.nav-lang-selector {
+    display: flex;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .nav-lang-selector {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Botones individuales EN / ES */
+.nav-lang-btn {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-family: "Lato", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 7px;
+    cursor: pointer;
+    border-radius: 3px;
+    opacity: 0.4;
+    transition: all 0.2s ease;
+}
+
+body.light-theme .nav-lang-btn {
+    color: #111; /* Color oscuro para el texto en modo claro si tu menú es claro */
+}
+body.dark-theme .nav-lang-btn {
+    color: #fff;
+}
+
+/* Botón de idioma activo */
+.nav-lang-btn.active {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+body.dark-theme .nav-lang-btn.active {
+    background: #ffcc00; /* Color ámbar de contraste para el modo oscuro */
+    color: #140129;
+}
+
+/* Ajuste responsivo para el menú desplegable tipo hamburguesa */
+@media screen and (max-width: 600px) {
+    .nav-controls {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 16px;
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
 }

@@ -1,0 +1,242 @@
+/* ============================================
+   index.css — Landing page hero
+   Dark-mode aware. Load AFTER style.css.
+   ============================================ */
+
+.ix-hero {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Background: single image, crossfade between slides ── */
+.ix-bg-slide {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px) brightness(0.32) saturate(0.55);
+    transform: scale(1.06);
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+.ix-bg-slide.active {
+    opacity: 1;
+}
+
+/* ── Dark gradient overlay ── */
+.ix-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 2, 18, 0.35) 0%,
+        rgba(5, 2, 18, 0.6) 55%,
+        rgba(5, 2, 18, 0.92) 100%
+    );
+}
+
+body.light-theme .ix-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(240, 235, 255, 0.25) 0%,
+        rgba(220, 210, 250, 0.55) 55%,
+        rgba(197, 213, 215, 0.95) 100%
+    );
+}
+
+/* ── Hero content layout ── */
+.ix-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2.5rem 2rem 2rem 2rem;
+    min-height: 480px;
+}
+
+/* ── Text block ── */
+.ix-text {
+    flex: 1;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.ix-eyebrow {
+    font-family: "Lato", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #a8a0f8;
+    margin-bottom: 0.7rem;
+}
+
+body.light-theme .ix-eyebrow { color: #3629cb; }
+
+.ix-title {
+    font-family: "Lora", serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 0 0 0.8rem 0;
+}
+
+body.light-theme .ix-title { color: #1a1a2e; }
+
+.ix-sub {
+    font-family: "Lato", sans-serif;
+    font-size: 0.97rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.68);
+    margin: 0 0 1.2rem 0;
+    max-width: 440px;
+}
+
+body.light-theme .ix-sub { color: rgba(20, 10, 60, 0.7); }
+
+/* ── Credential pills ── */
+.ix-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 1.4rem;
+}
+
+.ix-pill {
+    font-family: "Lato", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 4px 11px;
+    border-radius: 20px;
+    border: 1.5px solid;
+    white-space: nowrap;
+}
+
+.ix-purple { background: rgba(168,160,248,0.14); border-color: rgba(168,160,248,0.45); color: #c8c2ff; }
+.ix-teal   { background: rgba(29,158,117,0.14);  border-color: rgba(29,158,117,0.45);  color: #9fe1cb; }
+.ix-blue   { background: rgba(55,138,221,0.14);  border-color: rgba(55,138,221,0.45);  color: #85b7eb; }
+.ix-amber  { background: rgba(239,159,39,0.14);  border-color: rgba(239,159,39,0.45);  color: #fac775; }
+
+body.light-theme .ix-purple { background: #EEEDFE; border-color: #AFA9EC; color: #3C3489; }
+body.light-theme .ix-teal   { background: #E1F5EE; border-color: #5DCAA5; color: #085041; }
+body.light-theme .ix-blue   { background: #E6F1FB; border-color: #85B7EB; color: #0C447C; }
+body.light-theme .ix-amber  { background: #FAEEDA; border-color: #EF9F27; color: #633806; }
+
+/* ── CTA buttons ── */
+.ix-cta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.ix-btn-primary {
+    font-family: "Lato", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 6px;
+    background: #3629cb;
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: background 0.2s;
+    display: inline-block;
+}
+
+.ix-btn-primary:hover { background: #4c3fe0; color: #fff !important; }
+
+.ix-btn-ghost {
+    font-family: "Lato", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 6px;
+    background: transparent;
+    color: rgba(255,255,255,0.75) !important;
+    text-decoration: none !important;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    display: inline-block;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.ix-btn-ghost:hover { border-color: rgba(255,255,255,0.65); color: #fff !important; }
+
+body.light-theme .ix-btn-ghost { color: #3629cb !important; border-color: rgba(54,41,203,0.4); }
+body.light-theme .ix-btn-ghost:hover { border-color: #3629cb; color: #3629cb !important; }
+
+/* ── Slide indicator dots ── */
+.ix-dots {
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    z-index: 3;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.ix-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.ix-dot.active {
+    background: #a8a0f8;
+    transform: scale(1.3);
+}
+
+body.light-theme .ix-dot { background: rgba(54,41,203,0.25); }
+body.light-theme .ix-dot.active { background: #3629cb; }
+
+/* ── Portrait ── */
+.ix-portrait-wrap {
+    flex-shrink: 0;
+    align-self: flex-end;
+}
+
+.ix-portrait {
+    width: 200px;
+    height: 260px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px 10px 0 0;
+    display: block;
+    border: 2px solid rgba(168,160,248,0.35);
+    box-shadow: 0 -8px 40px rgba(54,41,203,0.3);
+}
+
+body.light-theme .ix-portrait {
+    border-color: rgba(54,41,203,0.3);
+    box-shadow: 0 -8px 40px rgba(54,41,203,0.15);
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+    .ix-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 1.5rem 1rem 1.2rem 1rem;
+        min-height: auto;
+    }
+    .ix-portrait-wrap { align-self: center; }
+    .ix-portrait { width: 130px; height: 170px; border-radius: 8px 8px 0 0; }
+    .ix-title { font-size: 1.8rem; }
+}
