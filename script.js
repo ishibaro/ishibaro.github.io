@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Mapbox
 
 if (document.getElementById('map')) {
-    mapboxgl.accessToken = 'pk.eyJ1IjoiaXNoaWJhIiwiYSI6ImNtcWkxNjR0MTAxb2oyc3NoM2dwaWVvcHEifQ.Aqg0n4gT7SxaW17ikivj2A';
+    mapboxgl.accessToken = '';
 
     const map = new mapboxgl.Map({
         container: 'map',
