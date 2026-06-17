@@ -1,2 +1,0 @@
-# ishibaro.github.io
-webpage
