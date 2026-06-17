@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/fd285000eb.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Egyptian+Hieroglyphs&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
+    <title>Contact — iRO</title>
+    <style>
+        body[data-lang="en"] [lang="es"] { display: none !important; }
+        body[data-lang="es"] [lang="en"] { display: none !important; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="hatched-text">iRO</h1>
+    <p class="subtitle-text"> ishiba ro's webpage</p>
+</header>
+
+<main>
+    <div class="container">
+
+        <nav class="topnav" id="myTopnav">
+            <a href="./index.html">Home</a>
+            <a href="./services.html">Services</a>
+            <a href="./profile.html">Profile</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a class="active" id="yellow" href="./contact.html">Contact</a>
+
+            <div class="nav-controls">
+                <div class="nav-lang-selector">
+                    <button class="nav-lang-btn" onclick="setLanguage('en')">EN</button>
+                    <button class="nav-lang-btn" onclick="setLanguage('es')">ES</button>
+                </div>
+<input type="checkbox" class="checkbox" id="checkbox">
+<label for="checkbox" class="checkbox-label">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+    <span class="ball"></span>
+</label>
+            </div>
+
+            <a href="javascript:void(0);" class="icon" onclick="ResponsiveNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <div class="main top">
+            <blockquote>
+                <p lang="en">What we have done for ourselves alone dies with us; what we have done for others and the world remains and is immortal.</p>
+                <p lang="es">Lo que hemos hecho solo para nosotros mismos muere con nosotros; lo que hemos hecho por los demás y por el mundo permanece y es inmortal.</p>
+                <footer>— <cite>Albert Pike</cite></footer>
+            </blockquote>
+        </div>
+
+        <div class="main content ct-content">
+            <div class="ct-page">
+
+                <!-- ── Header ── -->
+                <div class="ct-hero">
+                    <div class="ct-eyebrow">Israel Hinojosa Baliño · Durham, UK</div>
+                    <h2 lang="en">Get in touch</h2>
+                    <h2 lang="es">Escríbeme</h2>
+                    <p class="ct-sub" lang="en">Researcher, developer, collaborator. If you have a project, a question, or just want to say hello — I'm reachable through any of the channels below.</p>
+                    <p class="ct-sub" lang="es">Investigador, desarrollador, colaborador. Si tienes un proyecto, una pregunta, o simplemente quieres saludar — puedes encontrarme en cualquiera de los canales de abajo.</p>
+                </div>
+
+                <!-- ── Contact cards grid ── -->
+                <div class="ct-grid">
+
+                    <!-- Email -->
+                    <a class="ct-card ct-purple" href="mailto:ishiba.iro@gmail.com">
+                        <div class="ct-card-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="ct-card-label" lang="en">Email</div>
+                        <div class="ct-card-label" lang="es">Correo</div>
+                        <div class="ct-card-value">ishiba.iro@gmail.com</div>
+                    </a>
+
+                    <!-- Phone -->
+                    <a class="ct-card ct-teal" href="tel:+447392972684">
+                        <div class="ct-card-icon"><i class="fas fa-phone"></i></div>
+                        <div class="ct-card-label" lang="en">Phone</div>
+                        <div class="ct-card-label" lang="es">Teléfono</div>
+                        <div class="ct-card-value">+44 7392 972 684</div>
+                    </a>
+
+                    <!-- Blog -->
+                    <a class="ct-card ct-amber" href="http://ishiba.blogspot.com/" target="_blank" rel="noopener">
+                        <div class="ct-card-icon"><i class="fas fa-pencil-alt"></i></div>
+                        <div class="ct-card-label">Blog</div>
+                        <div class="ct-card-value">ishiba.blogspot.com</div>
+                    </a>
+
+                    <!-- Academia CV -->
+                    <a class="ct-card ct-blue" href="https://durham.academia.edu/IsraelHinojosaBalino/CurriculumVitae" target="_blank" rel="noopener">
+                        <div class="ct-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="ct-card-label" lang="en">Academic CV</div>
+                        <div class="ct-card-label" lang="es">CV Académico</div>
+                        <div class="ct-card-value">Academia.edu</div>
+                    </a>
+
+                </div>
+
+                <!-- ── Divider ── -->
+                <div class="ct-divider">
+                    <span lang="en">Social &amp; code</span>
+                    <span lang="es">Redes y código</span>
+                </div>
+
+                <!-- ── Social links ── -->
+                <div class="ct-social">
+
+                    <a class="ct-social-item" href="https://github.com/ishibaro" target="_blank" rel="noopener">
+                        <span class="ct-social-icon"><i class="fab fa-github"></i></span>
+                        <span class="ct-social-name">GitHub</span>
+                        <span class="ct-social-handle">ishibaro</span>
+                    </a>
+
+                    <a class="ct-social-item" href="https://www.youtube.com/@ishibaro" target="_blank" rel="noopener">
+                        <span class="ct-social-icon"><i class="fab fa-youtube"></i></span>
+                        <span class="ct-social-name">YouTube</span>
+                        <span class="ct-social-handle">ishibaro</span>
+                    </a>
+
+                    <a class="ct-social-item" href="https://www.instagram.com/ishibaro/" target="_blank" rel="noopener">
+                        <span class="ct-social-icon"><i class="fab fa-instagram"></i></span>
+                        <span class="ct-social-name">Instagram</span>
+                        <span class="ct-social-handle">ishibaro</span>
+                    </a>
+
+                    <a class="ct-social-item" href="https://flickr.com/people/ishiba/" target="_blank" rel="noopener">
+                        <span class="ct-social-icon"><i class="fab fa-flickr"></i></span>
+                        <span class="ct-social-name">Flickr</span>
+                        <span class="ct-social-handle">ishiba</span>
+                    </a>
+
+                    <a class="ct-social-item" href="https://twitter.com/ishiba" target="_blank" rel="noopener">
+                        <span class="ct-social-icon"><i class="fab fa-x-twitter"></i></span>
+                        <span class="ct-social-name">X / Twitter</span>
+                        <span class="ct-social-handle">ishiba</span>
+                    </a>
+
+                    <a class="ct-social-item" href="https://ishibaro.github.io/" target="_blank" rel="noopener">
+                        <span class="ct-social-icon"><i class="fas fa-globe"></i></span>
+                        <span class="ct-social-name" lang="en">GitHub Pages</span>
+                        <span class="ct-social-name" lang="es">Sitio GitHub</span>
+                        <span class="ct-social-handle">ishibaro.github.io</span>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="dynamicc">
+                <div class="boxd boxd1" lang="en">Archaeology</div>
+                <div class="boxd boxd1" lang="es">Arqueología</div>
+                <div class="boxd boxd2" lang="en">Software development</div>
+                <div class="boxd boxd2" lang="es">Desarrollo de software</div>
+                <div class="boxd boxd3" lang="en">Data analysis</div>
+                <div class="boxd boxd3" lang="es">Análisis de datos</div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<div class="foot">
+    <h3>Enjoy!</h3>
+</div>
+
+</body>
+</html>

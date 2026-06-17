@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/fd285000eb.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Egyptian+Hieroglyphs&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
+    <title>Services — iRO</title>
+    <style>
+        body[data-lang="en"] [lang="es"] { display: none !important; }
+        body[data-lang="es"] [lang="en"] { display: none !important; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="hatched-text">iRO</h1>
+    <p class="subtitle-text"> ishiba ro's webpage</p>
+</header>
+
+<main>
+    <div class="container">
+
+        <nav class="topnav" id="myTopnav">
+            <a href="./index.html">Home</a>
+            <a class="active" href="./services.html">Services</a>
+            <a href="./profile.html">Profile</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a id="yellow" href="./contact.html">Contact</a>
+
+            <div class="nav-controls">
+                <div class="nav-lang-selector">
+                    <button class="nav-lang-btn" onclick="setLanguage('en')">EN</button>
+                    <button class="nav-lang-btn" onclick="setLanguage('es')">ES</button>
+                </div>
+<input type="checkbox" class="checkbox" id="checkbox">
+<label for="checkbox" class="checkbox-label">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+    <span class="ball"></span>
+</label>
+            </div>
+
+            <a href="javascript:void(0);" class="icon" onclick="ResponsiveNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <div class="main top">
+            <blockquote>
+                <p>Sospecho, sin embargo, que no era muy capaz de pensar. Pensar es olvidar diferencias, es generalizar, abstraer. En el abarrotado mundo de Funes no había sino detalles, casi inmediatos.</p>
+                <footer>— <cite>Jorge Luis Borges, Ficciones</cite></footer>
+            </blockquote>
+        </div>
+
+        <div class="main content sv-content">
+            <div class="sv-page">
+
+                <!-- ── Hero ── -->
+                <div class="sv-hero">
+                    <div class="sv-eyebrow" lang="en">Archaeological consultant · Freelance</div>
+                    <div class="sv-eyebrow" lang="es">Consultor en arqueología · Freelance</div>
+
+                    <h2 lang="en">Fieldwork, spatial data,<br>and research code.</h2>
+                    <h2 lang="es">Trabajo de campo, datos espaciales<br>y código para investigación.</h2>
+
+                    <p class="sv-sub" lang="en">
+                        I work with research teams, heritage projects, and institutions that need accurate spatial data, robust analysis pipelines, or field documentation they can actually trust. Not a generalist agency — a specialist who has done this on real projects, in real conditions, across three continents.
+                    </p>
+                    <p class="sv-sub" lang="es">
+                        Trabajo con equipos de investigación, proyectos de patrimonio e instituciones que necesitan datos espaciales precisos, pipelines de análisis robustos, o documentación de campo en la que puedan confiar. No soy una agencia generalista — soy un especialista que ha hecho esto en proyectos reales, en condiciones reales, en tres continentes.
+                    </p>
+                </div>
+
+                <!-- ══════════════════════════════
+                     SERVICE BLOCKS
+                ══════════════════════════════ -->
+
+                <!-- 1. Field survey -->
+                <div class="sv-block">
+                    <div class="sv-block-header">
+                        <div class="sv-block-icon sv-purple"><i class="fas fa-drafting-compass"></i></div>
+                        <div>
+                            <div class="sv-block-label" lang="en">In the field</div>
+                            <div class="sv-block-label" lang="es">En el campo</div>
+                            <h3 lang="en">Topographic &amp; archaeological survey</h3>
+                            <h3 lang="es">Levantamiento topográfico y arqueológico</h3>
+                        </div>
+                    </div>
+                    <p lang="en">
+                        Total station survey, GPS data collection, drone-based photogrammetry, and aerial reconnaissance using UAVs. I've directed field documentation at Teotihuacan, in the Nile Delta, on Failaka Island (Kuwait), and across Sinaloa and Chiapas — working with restricted airspace, remote sites, and complex stratigraphy.
+                    </p>
+                    <p lang="es">
+                        Levantamiento con estación total, recolección de datos GPS, fotogrametría con dron y reconocimiento aéreo con UAV. He dirigido documentación de campo en Teotihuacan, el Delta del Nilo, la Isla Failaka (Kuwait) y en Sinaloa y Chiapas — trabajando con espacio aéreo restringido, sitios remotos y estratigrafía compleja.
+                    </p>
+                    <div class="sv-tags">
+                        <span class="sv-tag">Total station</span>
+                        <span class="sv-tag">GPS / GNSS</span>
+                        <span class="sv-tag">UAV / Drone survey</span>
+                        <span class="sv-tag">Photogrammetry</span>
+                        <span class="sv-tag">Remote sensing</span>
+                        <span class="sv-tag">TanDEM-X DEM</span>
+                        <span class="sv-tag" lang="en">Site documentation</span>
+                        <span class="sv-tag" lang="es">Documentación de sitio</span>
+                    </div>
+                </div>
+
+                <!-- 2. GIS -->
+                <div class="sv-block">
+                    <div class="sv-block-header">
+                        <div class="sv-block-icon sv-teal"><i class="fas fa-layer-group"></i></div>
+                        <div>
+                            <div class="sv-block-label" lang="en">Spatial analysis</div>
+                            <div class="sv-block-label" lang="es">Análisis espacial</div>
+                            <h3 lang="en">GIS, mapping &amp; spatial modelling</h3>
+                            <h3 lang="es">SIG, cartografía y modelado espacial</h3>
+                        </div>
+                    </div>
+                    <p lang="en">
+                        Spatio-temporal GIS databases, landscape analysis, visibility modelling, least-cost paths, network modelling, and cost-surface simulations. Platform-agnostic: QGIS, ArcGIS, ArcGIS Online (Story Maps, Experience Builder, Survey123, QuickCapture), and MerginMaps for mobile field data collection.
+                    </p>
+                    <p lang="es">
+                        Bases de datos SIG espacio-temporales, análisis de paisaje, modelado de visibilidad, rutas de menor costo, modelado de redes y simulaciones de superficie de costo. Sin dependencia de plataforma: QGIS, ArcGIS, ArcGIS Online (Story Maps, Experience Builder, Survey123, QuickCapture) y MerginMaps para recolección de datos móvil en campo.
+                    </p>
+                    <div class="sv-tags">
+                        <span class="sv-tag">QGIS</span>
+                        <span class="sv-tag">ArcGIS / ArcGIS Online</span>
+                        <span class="sv-tag">MerginMaps</span>
+                        <span class="sv-tag">Story Maps</span>
+                        <span class="sv-tag" lang="en">Visibility analysis</span>
+                        <span class="sv-tag" lang="es">Análisis de visibilidad</span>
+                        <span class="sv-tag" lang="en">Least-cost paths</span>
+                        <span class="sv-tag" lang="es">Rutas de menor costo</span>
+                        <span class="sv-tag" lang="en">Settlement pattern analysis</span>
+                        <span class="sv-tag" lang="es">Análisis de patrones de asentamiento</span>
+                    </div>
+                </div>
+
+                <!-- 3. Data & code -->
+                <div class="sv-block">
+                    <div class="sv-block-header">
+                        <div class="sv-block-icon sv-amber"><i class="fas fa-code"></i></div>
+                        <div>
+                            <div class="sv-block-label" lang="en">Research code</div>
+                            <div class="sv-block-label" lang="es">Código para investigación</div>
+                            <h3 lang="en">Data analysis &amp; scripting</h3>
+                            <h3 lang="es">Análisis de datos y scripting</h3>
+                        </div>
+                    </div>
+                    <p lang="en">
+                        Python and R scripts for archaeological and spatial data analysis — cleaning, modelling, visualisation, and publication-quality figures. SQL databases (PostgreSQL, SQLite, GeoPackage, Access) designed for long-term research use, including mobile-ready schemas for field data collection. Web mapping with JavaScript and Mapbox GL JS.
+                    </p>
+                    <p lang="es">
+                        Scripts en Python y R para análisis de datos arqueológicos y espaciales — limpieza, modelado, visualización y figuras listas para publicación. Bases de datos SQL (PostgreSQL, SQLite, GeoPackage, Access) diseñadas para uso de investigación a largo plazo, incluyendo esquemas listos para móvil en recolección de datos de campo. Cartografía web con JavaScript y Mapbox GL JS.
+                    </p>
+                    <div class="sv-tags">
+                        <span class="sv-tag">Python</span>
+                        <span class="sv-tag">R</span>
+                        <span class="sv-tag">PostgreSQL</span>
+                        <span class="sv-tag">SQLite / GeoPackage</span>
+                        <span class="sv-tag">Mapbox GL JS</span>
+                        <span class="sv-tag">JavaScript</span>
+                        <span class="sv-tag" lang="en">Data visualisation</span>
+                        <span class="sv-tag" lang="es">Visualización de datos</span>
+                        <span class="sv-tag" lang="en">Publication figures</span>
+                        <span class="sv-tag" lang="es">Figuras para publicación</span>
+                    </div>
+                </div>
+
+                <!-- 4. Teaching / workshops -->
+                <div class="sv-block">
+                    <div class="sv-block-header">
+                        <div class="sv-block-icon sv-blue"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div>
+                            <div class="sv-block-label" lang="en">Training</div>
+                            <div class="sv-block-label" lang="es">Formación</div>
+                            <h3 lang="en">Workshops &amp; teaching</h3>
+                            <h3 lang="es">Talleres y docencia</h3>
+                        </div>
+                    </div>
+                    <p lang="en">
+                        Hands-on workshops in GIS/QGIS, topographic survey, photogrammetry, and remote sensing — delivered at universities and field schools in Mexico, the UK, Kazakhstan, and Iraq. Tailored for archaeologists, not software engineers: practical, grounded in real fieldwork problems.
+                    </p>
+                    <p lang="es">
+                        Talleres prácticos de SIG/QGIS, levantamiento topográfico, fotogrametría y teledetección — impartidos en universidades y escuelas de campo en México, Reino Unido, Kazajistán e Irak. Diseñados para arqueólogos, no para ingenieros de software: prácticos, fundamentados en problemas reales de campo.
+                    </p>
+                    <div class="sv-tags">
+                        <span class="sv-tag">GIS / QGIS workshops</span>
+                        <span class="sv-tag" lang="en">Topographic survey training</span>
+                        <span class="sv-tag" lang="es">Formación en levantamiento topográfico</span>
+                        <span class="sv-tag">Remote sensing</span>
+                        <span class="sv-tag" lang="en">Field school instruction</span>
+                        <span class="sv-tag" lang="es">Instrucción en escuela de campo</span>
+                    </div>
+                </div>
+
+                <!-- ── CTA ── -->
+                <div class="sv-cta">
+                    <p lang="en">Interested in working together?</p>
+                    <p lang="es">¿Interesado en colaborar?</p>
+                    <a class="sv-cta-btn" href="./contact.html" lang="en">Get in touch →</a>
+                    <a class="sv-cta-btn" href="./contact.html" lang="es">Escríbeme →</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="dynamicc">
+                <div class="boxd boxd1" lang="en">Archaeology</div>
+                <div class="boxd boxd1" lang="es">Arqueología</div>
+                <div class="boxd boxd2" lang="en">Software development</div>
+                <div class="boxd boxd2" lang="es">Desarrollo de software</div>
+                <div class="boxd boxd3" lang="en">Data analysis</div>
+                <div class="boxd boxd3" lang="es">Análisis de datos</div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<div class="foot">
+    <h3>Enjoy!</h3>
+</div>
+
+
+<script>
+(function () {
+    var blocks = document.querySelectorAll('.sv-block');
+    if (!blocks.length || !window.IntersectionObserver) {
+        blocks.forEach(function(el) { el.classList.add('visible'); });
+        return;
+    }
+    var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+            if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+        });
+    }, { threshold: 0.1 });
+    blocks.forEach(function(el, i) {
+        el.style.transitionDelay = (i * 0.07) + 's';
+        obs.observe(el);
+    });
+})();
+</script>
+</body>
+</html>
