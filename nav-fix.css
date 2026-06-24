@@ -1,0 +1,124 @@
+/* ============================================
+   NAV FIX — reemplaza toda la lógica del nav
+   en style.css. Pega esto AL FINAL del archivo.
+   ============================================ */
+
+/* ── Base nav: flexbox en lugar de floats ── */
+.topnav {
+    background: #3629cb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    overflow: visible;
+}
+
+/* Quitar floats de los links — flexbox los maneja */
+.topnav a {
+    float: none !important;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 8px 8px 0 0;
+    margin-right: 0.5px;
+    transition: background 0.3s;
+    background: #4C01A0;
+    z-index: 99;
+    white-space: nowrap;
+}
+
+.topnav a:hover { background: rgb(245, 207, 255); }
+.topnav a.active { background-color: #3629cb; font-weight: 600; }
+
+/* Contact link empuja al extremo derecho */
+#yellow { margin-left: auto; }
+
+/* nav-controls: pegado a la derecha, inline con los links */
+.nav-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px;
+    flex-shrink: 0;
+}
+
+/* Botón hamburger: oculto en desktop */
+.topnav .icon { display: none !important; }
+
+/* ── MÓVIL (≤600px) ── */
+@media screen and (max-width: 600px) {
+
+    /* Nav cerrado: columna, solo muestra Home + hamburger */
+    .topnav {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    /* Ocultar todos los links excepto el primero */
+    .topnav a:not(:first-child):not(.icon) { display: none; }
+
+    /* Ocultar controles cuando menú está cerrado */
+    .topnav .nav-controls { display: none; }
+
+    /* Mostrar hamburger */
+    .topnav .icon {
+        display: flex !important;
+        align-items: center;
+        margin-left: auto;
+        background: #4C01A0;
+        float: none !important;
+    }
+
+    /* Nav abierto (.responsive) */
+    .topnav.responsive {
+        position: sticky; /* mantener sticky */
+    }
+
+    .topnav.responsive a:not(.icon) {
+        display: flex !important;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    /* Controles visibles al abrir */
+    .topnav.responsive .nav-controls {
+        display: flex !important;
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px 16px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+    }
+}
+
+
+/* Controles como item del nav */
+.nav-controls-item {
+    display: inline-flex;
+    align-items: center;
+    background: #3629cb;
+    gap: 12px;
+    padding: 0 12px;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav .nav-controls-item { display: none; }
+
+    .topnav.responsive .nav-controls-item {
+        display: flex !important;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 16px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+    }
+}

@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/fd285000eb.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="nav-fix.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Egyptian+Hieroglyphs&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
     <title>Services — iRO</title>
     <style>
@@ -26,30 +27,30 @@
 <main>
     <div class="container">
 
-        <nav class="topnav" id="myTopnav">
-            <a href="./index.html">Home</a>
-            <a class="active" href="./services.html">Services</a>
-            <a href="./profile.html">Profile</a>
-            <a href="./portfolio.html">Portfolio</a>
-            <a id="yellow" href="./contact.html">Contact</a>
+<nav class="topnav" id="myTopnav">
+    <a href="./index.html">Home</a>
+    <a class="active" href="./services.html">Services</a>
+    <a href="./profile.html">Profile</a>
+    <a href="./portfolio.html">Portfolio</a>
+    <a id="yellow" href="./contact.html">Contact</a>
+    
+    <div class="nav-controls-item">
+        <div class="nav-lang-selector">
+            <button class="nav-lang-btn" onclick="setLanguage('en')">EN</button>
+            <button class="nav-lang-btn" onclick="setLanguage('es')">ES</button>
+        </div>
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="ball"></span>
+        </label>
+    </div>
 
-            <div class="nav-controls">
-                <div class="nav-lang-selector">
-                    <button class="nav-lang-btn" onclick="setLanguage('en')">EN</button>
-                    <button class="nav-lang-btn" onclick="setLanguage('es')">ES</button>
-                </div>
-<input type="checkbox" class="checkbox" id="checkbox">
-<label for="checkbox" class="checkbox-label">
-    <i class="fas fa-moon"></i>
-    <i class="fas fa-sun"></i>
-    <span class="ball"></span>
-</label>
-            </div>
-
-            <a href="javascript:void(0);" class="icon" onclick="ResponsiveNav()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </nav>
+    <a href="javascript:void(0);" class="icon" onclick="ResponsiveNav()">
+        <i class="fa fa-bars"></i>
+    </a>
+</nav>
 
         <div class="main top">
             <blockquote>
