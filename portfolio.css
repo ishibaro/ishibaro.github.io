@@ -227,7 +227,10 @@
     }
     .pf-large,
     .pf-medium,
-    .pf-narrow {
+    .pf-narrow,
+    .pf-narsml,
+    .pf-narlar,
+    .pf-medlar {
         grid-column: span 1;
         grid-row: span 1;
     }
