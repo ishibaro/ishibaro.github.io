@@ -218,6 +218,9 @@
     .pf-large  { grid-column: span 2; grid-row: span 2; }
     .pf-medium { grid-column: span 2; grid-row: span 1; }
     .pf-narrow { grid-column: span 1; grid-row: span 1; }
+    .pf-narsml { grid-column: span 1; grid-row: span 1; }
+    .pf-narlar { grid-column: span 1; grid-row: span 2; }
+    .pf-medlar { grid-column: span 2; grid-row: span 1; }
 }
 
 /* Mobile: single column, all cards flat */
