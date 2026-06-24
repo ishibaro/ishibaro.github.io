@@ -63,19 +63,18 @@
             <h2 lang="es">Portafolio</h2>
 
             <div class="pf-grid">
-
-                
-                
-             
                 <div class="pf-card pf-medlar pf-qgis">
                     <div class="pf-icon"><i class="fab fa-python"></i></div> 
+                     <div class="pf-preview-wrapper">
+                    <div><img src="assets/icon_ccc.png" alt="preview" class="pf-preview-img"></div>
                     <div class="pf-code-preview">
                         <div><span class="comment"># legacy_map_cast.py<br>
-# "Click & Go" — the original Corona Clicker behaviour.</span></div>
+                            # "Click & Go" — the original Corona Clicker behaviour.</span></div>
                             <div><span class="keyword">from</span> qgis.utils <span class="keyword">import</span> iface</div>
                             <div>CAST_WEB = <span class="string">"https://.../atlas#zoom=16&center=<span class="variable">{x:.4f}</span>,<span class="variable">{y:.4f}</span>"</span></div>
                     </div>
-                    
+                    </div>
+                    <br>
                     <div class="pf-tag" lang="en">Show Corona CAST by click</div>
                     <div class="pf-tag" lang="es">Mostrar Corona CAST con un clic</div>
                     
@@ -83,6 +82,30 @@
                     <h3 lang="es">Complemento de QGIS</h3>
                     
                     <a class="pf-link" href="https://github.com/ishibaro/CAST-corona-clicker" target="_blank">
+                        <span lang="en">View</span><span lang="es">Ver</span> <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="pf-card pf-medlar pf-qgis">
+                    <div class="pf-icon"><i class="fab fa-python"></i></div> 
+                    <div class="pf-preview-wrapper">
+                    <div><img src="assets/rem_tool.png" alt="preview" class="pf-preview-img"></div>
+                    <div class="pf-code-preview">
+                        <div><span class="comment">rem_plugin.py<br>
+                            # Relative Elevation Model (REM) — QGIS Plugin</span></div>
+                            <div><span class="keyword">from</span> qgis.core <span class="keyword">import</span> QgsProcessingParameterRasterLayer,</div>
+                            <div>"gdal:rastercalculator", &lcub;   <span class="string">"FORMULA": "(A - B) * (A >= B)"</span></div>
+                    </div>
+                    </div>
+                    <br>
+                    <div class="pf-tag" lang="en">🌄 Generate Relative Elevation Model (REM)</div>
+                    <div class="pf-tag" lang="es">🌄 Genera un Modelo Relativo de Elevación (MRE)</div>
+                    
+                    
+                    <h3 lang="en">QGIS plug-in</h3>
+                    <h3 lang="es">Complemento de QGIS</h3>
+                    
+                    <a class="pf-link" href="https://github.com/ishibaro/rem-plugin" target="_blank">
                         <span lang="en">View</span><span lang="es">Ver</span> <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
@@ -154,7 +177,7 @@
                     </a>
                 </div>
 
-                                <div class="pf-card pf-narlar pf-coral">
+                <div class="pf-card pf-narlar pf-coral">
                     <div class="pf-icon"><i class="fas fa-map-pin"></i></div>
                     <div class="pf-bars">
                         <div class="eq-bar" style="height:30%"></div>
@@ -245,9 +268,8 @@
                         <span lang="en">Open</span><span lang="es">Abrir</span> <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
-
-
             </div>
+
         </div>
 
         <div class="bottom">
