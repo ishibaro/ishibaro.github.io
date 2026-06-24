@@ -129,11 +129,13 @@ body.light-theme .ix-sub { color: rgba(20, 10, 60, 0.7); }
 .ix-teal   { background: rgba(29,158,117,0.14);  border-color: rgba(29,158,117,0.45);  color: #9fe1cb; }
 .ix-blue   { background: rgba(55,138,221,0.14);  border-color: rgba(55,138,221,0.45);  color: #85b7eb; }
 .ix-amber  { background: rgba(239,159,39,0.14);  border-color: rgba(239,159,39,0.45);  color: #fac775; }
+.ix-honeydew  { background: rgba(239,159,39,0.14);  border-color: rgba(240,255,240,0.45);  color: #B8E5B8; }
 
 body.light-theme .ix-purple { background: #EEEDFE; border-color: #AFA9EC; color: #3C3489; }
 body.light-theme .ix-teal   { background: #E1F5EE; border-color: #5DCAA5; color: #085041; }
 body.light-theme .ix-blue   { background: #E6F1FB; border-color: #85B7EB; color: #0C447C; }
 body.light-theme .ix-amber  { background: #FAEEDA; border-color: #EF9F27; color: #633806; }
+body.light-theme .ix-honeydew  { background: #F0FFF0;  border-color:#D1E8D1;  color: #3a5c56; }
 
 /* ── CTA buttons ── */
 .ix-cta {
