@@ -4,7 +4,7 @@
    Import AFTER style.css — does not override
    existing site styles, only adds new ones.
    ============================================ */
-
+ 
 /* Widen the content block on the portfolio page */
 .portfolio-content {
     width: 100% !important;
@@ -12,7 +12,7 @@
     background-color: transparent !important;
     padding: 10px 10px 20px 10px;
 }
-
+ 
 /* ── Grid container ── */
 .pf-grid {
     display: grid;
@@ -21,7 +21,7 @@
     gap: 10px;
     margin-top: 16px;
 }
-
+ 
 /* ── Card sizes (Tetris pieces) ── */
 .pf-large  { grid-column: span 2; grid-row: span 3; }
 .pf-medium { grid-column: span 2; grid-row: span 2; }
@@ -29,7 +29,7 @@
 .pf-narsml { grid-column: span 0; grid-row: span 1; }
 .pf-narlar { grid-column: span 1; grid-row: span 2; }
 .pf-medlar { grid-column: span 2; grid-row: span 1; }
-
+ 
 /* ── Base card ── */
 .pf-card {
     position: relative;
@@ -43,19 +43,19 @@
     transition: transform 0.15s ease, box-shadow 0.15s ease;
     min-height: 130px;
 }
-
+ 
 .pf-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
-
+ 
 /* ── Colour themes ── */
 .pf-teal   { background-color: #E1F5EE; border-color: #9FE1CB; }
 .pf-purple { background-color: #EEEDFE; border-color: #CECBF6; }
 .pf-amber  { background-color: #FAEEDA; border-color: #FAC775; }
 .pf-blue   { background-color: #E6F1FB; border-color: #B5D4F4; }
 .pf-coral  { background-color: #FAECE7; border-color: #F5C4B3; }
-
+ 
 /* ── Decorative background icon ── */
 .pf-icon {
     position: absolute;
@@ -65,7 +65,7 @@
     opacity: 0.1;
     color: #000;
 }
-
+ 
 /* ── Text inside cards ── */
 .pf-tag {
     font-size: 11px;
@@ -75,7 +75,7 @@
     margin-bottom: 4px;
     opacity: 0.65;
 }
-
+ 
 /* Override global h3 only inside portfolio cards */
 .pf-card h3 {
     font-family: "Lora", serif;
@@ -84,7 +84,7 @@
     margin: 0 0 4px 0;
     color: inherit;
 }
-
+ 
 .pf-card p {
     font-size: 0.8rem;
     line-height: 1.45;
@@ -92,7 +92,7 @@
     opacity: 0.8;
     color: inherit;
 }
-
+ 
 /* ── Link button — overrides global "a" style ── */
 .pf-link {
     display: inline-flex;
@@ -110,16 +110,16 @@
     background: rgba(255,255,255,0.55);
     transition: background 0.2s;
 }
-
+ 
 .pf-link:hover {
     background: rgba(255,255,255,0.85);
     color: #3629cb !important;
 }
-
+ 
 .pf-link .fas {
     font-size: 0.7rem;
 }
-
+ 
 /* ── Mapbox embed inside the large card ── */
 .pf-map {
     width: 100%;
@@ -128,7 +128,7 @@
     margin-bottom: 10px;
     flex-shrink: 0;
 }
-
+ 
 /* ── Mini heatmap (Covid card) ── */
 .pf-heatmap {
     display: flex;
@@ -136,13 +136,13 @@
     gap: 3px;
     margin-bottom: 10px;
 }
-
+ 
 .hm-row {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 3px;
 }
-
+ 
 .hm-cell {
     height: 12px;
     border-radius: 2px;
@@ -152,7 +152,7 @@
 .hm-cell.mid { background: #378ADD; }
 .hm-cell.lo  { background: #B5D4F4; }
 .hm-cell.so  { background: #efffad; }
-
+ 
 /* ── Bar chart (Sismos card) ── */
 .pf-bars {
     display: flex;
@@ -162,20 +162,20 @@
     margin-bottom: 10px;
     flex-shrink: 0;
 }
-
+ 
 .eq-bar {
     flex: 1;
     background: #D85A30;
     border-radius: 2px 2px 0 0;
     opacity: 0.75;
 }
-
+ 
 /* ── QGIS Card Theme ── */
 .pf-qgis { 
     background-color: #E8F5E9; /* Soft QGIS Green */
     border-color: #A5D6A7; 
 }
-
+ 
 /* ── Python/QGIS Code snippet container ── */
 .pf-code-preview {
     font-family: 'Courier New', Courier, monospace;
@@ -193,23 +193,23 @@
     flex-direction: column;
     gap: 2px;
 }
-
+ 
 .pf-code-preview span.keyword { color: #d85a30; font-weight: bold; }
 .pf-code-preview span.comment { color: #757575; font-style: italic; }
 /* New highlight classes */
 .pf-code-preview span.string  { color: #2b5cb3; } /* Muted blue for the URL */
 .pf-code-preview span.variable { color: #b32b85; font-weight: 500; } /* Pink/Magenta for {x}, {y} */
-
+ 
 /* ── Specific styling for Python/QGIS tags ── */
 .pf-qgis .pf-tag {
     color: #1B5E20;
 }
-
-
+ 
+ 
 /* ============================================
    RESPONSIVE BREAKPOINTS
    ============================================ */
-
+ 
 /* Tablet: 2-column grid, large cards stay wide */
 @media (max-width: 800px) {
     .pf-grid {
@@ -222,7 +222,7 @@
     .pf-narlar { grid-column: span 1; grid-row: span 2; }
     .pf-medlar { grid-column: span 2; grid-row: span 1; }
 }
-
+ 
 /* Mobile: single column, all cards flat */
 @media (max-width: 500px) {
     .pf-grid {
@@ -242,15 +242,15 @@
         min-height: 160px;
     }
 }
-
-
+ 
+ 
 .pf-preview-wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 8px;
 }
-
+ 
 .pf-preview-img {
     width: 100px;
     height: 100px;
@@ -259,8 +259,38 @@
     flex-shrink: 0;
     order: -1;
 }
-
+ 
 .pf-code-preview {
     flex: 1;
     min-width: 150px;
+}
+/* ── Dark mode overrides ── */
+body.dark-theme .pf-teal   { background-color: var(--dark-teal-bg);   border-color: var(--dark-teal-border);   color: var(--dark-teal-text); }
+body.dark-theme .pf-purple { background-color: var(--dark-purple-bg); border-color: var(--dark-purple-border); color: var(--dark-purple-text); }
+body.dark-theme .pf-amber  { background-color: var(--dark-amber-bg);  border-color: var(--dark-amber-border);  color: var(--dark-amber-text); }
+body.dark-theme .pf-blue   { background-color: var(--dark-blue-bg);   border-color: var(--dark-blue-border);   color: var(--dark-blue-text); }
+body.dark-theme .pf-coral  { background-color: var(--dark-coral-bg);  border-color: var(--dark-coral-border);  color: var(--dark-coral-text); }
+body.dark-theme .pf-qgis   { background-color: rgba(29,100,40,0.15);  border-color: rgba(80,180,90,0.35);      color: #a5d6a7; }
+ 
+body.dark-theme .pf-card h3 { color: inherit; }
+body.dark-theme .pf-card p  { color: inherit; }
+body.dark-theme .pf-icon    { color: #fff; }
+ 
+body.dark-theme .pf-qgis .pf-tag { color: #81c784; }
+ 
+body.dark-theme .pf-code-preview {
+    background: rgba(0,0,0,0.3);
+    border-color: rgba(80,180,90,0.25);
+    color: #a5d6a7;
+}
+ 
+body.dark-theme .pf-link {
+    background: rgba(0,0,0,0.25);
+    border-color: rgba(168,160,248,0.4);
+    color: var(--color-purple-light) !important;
+}
+ 
+body.dark-theme .pf-link:hover {
+    background: rgba(0,0,0,0.45);
+    color: var(--color-purple-light) !important;
 }
