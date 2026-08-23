@@ -1,0 +1,291 @@
+/* ============================================
+   store.css — Store & Downloads page
+   Dark-mode aware. Load AFTER style.css.
+   ============================================ */
+
+.st-content {
+    width: 100% !important;
+    max-width: 100%;
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
+.st-page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.4rem 4rem 1.4rem;
+}
+
+/* ── Hero ── */
+.st-hero {
+    padding: 1.5rem 0 2rem 0;
+    border-bottom: 2px solid var(--color-purple-primary);
+    margin-bottom: 2rem;
+}
+
+body.dark-theme .st-hero { border-bottom-color: var(--color-purple-light); }
+
+.st-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--color-purple-primary);
+    margin-bottom: 0.6rem;
+}
+
+body.dark-theme .st-eyebrow { color: var(--color-purple-light); }
+
+.st-hero h2 {
+    font-family: var(--font-serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0 0 0.6rem 0;
+    color: #1a1a2e;
+}
+
+body.dark-theme .st-hero h2 { color: #f0f0f0; }
+
+.st-sub {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #555;
+    margin: 0;
+}
+
+body.dark-theme .st-sub { color: #aaa; }
+
+/* ── Section divider ── */
+.st-divider {
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-purple-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 2rem 0 1.2rem 0;
+}
+
+body.dark-theme .st-divider { color: var(--color-purple-light); }
+
+.st-divider::before,
+.st-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.2;
+}
+
+/* ── Cards grid ── */
+.st-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    margin-bottom: 1rem;
+}
+
+.st-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    border: 1.5px solid;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.st-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* Colour themes — light */
+body.light-theme .st-purple { background: var(--accent-purple-bg); border-color: var(--accent-purple-border); color: var(--accent-purple-text); }
+body.light-theme .st-teal   { background: var(--accent-teal-bg);   border-color: var(--accent-teal-border);   color: var(--accent-teal-text); }
+body.light-theme .st-amber  { background: var(--accent-amber-bg);  border-color: var(--accent-amber-border);  color: var(--accent-amber-text); }
+body.light-theme .st-blue   { background: var(--accent-blue-bg);   border-color: var(--accent-blue-border);   color: var(--accent-blue-text); }
+
+/* Colour themes — dark */
+body.dark-theme .st-purple { background: var(--dark-purple-bg); border-color: var(--dark-purple-border); color: var(--dark-purple-text); }
+body.dark-theme .st-teal   { background: var(--dark-teal-bg);   border-color: var(--dark-teal-border);   color: var(--dark-teal-text); }
+body.dark-theme .st-amber  { background: var(--dark-amber-bg);  border-color: var(--dark-amber-border);  color: var(--dark-amber-text); }
+body.dark-theme .st-blue   { background: var(--dark-blue-bg);   border-color: var(--dark-blue-border);   color: var(--dark-blue-text); }
+
+.st-card-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.6rem;
+    opacity: 0.12;
+}
+
+.st-tag {
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.st-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 2px 0 4px 0;
+    color: inherit;
+}
+
+.st-card p {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    line-height: 1.55;
+    opacity: 0.82;
+    color: inherit;
+    margin: 0;
+}
+
+/* ── Action buttons ── */
+.st-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.st-btn {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: var(--radius-sm);
+    text-decoration: none !important;
+    display: inline-block;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.st-btn-primary {
+    background: var(--color-purple-primary);
+    color: #fff !important;
+    border: 1.5px solid var(--color-purple-primary);
+}
+
+.st-btn-primary:hover { background: #4c3fe0; }
+
+.st-btn-ghost {
+    background: transparent;
+    color: var(--color-purple-primary) !important;
+    border: 1.5px solid rgba(54,41,203,0.4);
+}
+
+body.dark-theme .st-btn-ghost {
+    color: var(--color-purple-light) !important;
+    border-color: rgba(168,160,248,0.4);
+}
+
+.st-btn-ghost:hover { border-color: var(--color-purple-primary); }
+
+/* ── Free badge ── */
+.st-free-badge {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: rgba(29,158,117,0.15);
+    color: var(--accent-teal-text);
+    border: 1px solid var(--accent-teal-border);
+    margin-top: 6px;
+    width: fit-content;
+}
+
+body.dark-theme .st-free-badge {
+    background: var(--dark-teal-bg);
+    color: var(--dark-teal-text);
+    border-color: var(--dark-teal-border);
+}
+
+/* ── Responsive ── */
+@media (max-width: 500px) {
+    .st-page { padding: 1.2rem 0.8rem 3rem 0.8rem; }
+    .st-hero h2 { font-size: 1.5rem; }
+    .st-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Ingram widget ── */
+.st-ingram-widget {
+    display: flex;
+    gap: 14px;
+    background: #FAF8F4;
+    border-radius: var(--radius-md);
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #e0ddd6;
+}
+
+body.dark-theme .st-ingram-widget {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.1);
+}
+
+.st-ingram-cover {
+    width: 80px;
+    height: auto;
+    align-self: flex-start;
+    border-radius: 4px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.st-ingram-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+}
+
+.st-ingram-title {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.3;
+}
+
+body.dark-theme .st-ingram-title { color: #f0f0f0; }
+
+.st-ingram-authors {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #666;
+    line-height: 1.4;
+}
+
+body.dark-theme .st-ingram-authors { color: #aaa; }
+
+.st-ingram-btn {
+    display: inline-block;
+    background: #3A7C92;
+    color: white !important;
+    text-decoration: none !important;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 4px;
+    width: fit-content;
+    transition: background 0.2s;
+}
+
+.st-ingram-btn:hover { background: #2d6275; }

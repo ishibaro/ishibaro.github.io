@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="base-path" content=".">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contact.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
+    <script defer src="./assets/scripts/main.js"></script>
     <script src="https://kit.fontawesome.com/fd285000eb.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="nav-fix.css">
+    <link rel="stylesheet" href="./assets/css/nav.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Egyptian+Hieroglyphs&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
     <title>Contact — iRO</title>
     <style>
@@ -27,37 +28,10 @@
 <main>
     <div class="container">
 
-        <nav class="topnav" id="myTopnav">
-            <a href="./index.html">Home</a>
-            <a href="./services.html">Services</a>
-            <a href="./profile.html">Profile</a>
-            <a href="./portfolio.html">Portfolio</a>
-            <a class="active" id="yellow" href="./contact.html">Contact</a>
-
-            <div class="nav-controls-item">
-                <div class="nav-lang-selector">
-                    <button class="nav-lang-btn" onclick="setLanguage('en')">EN</button>
-                    <button class="nav-lang-btn" onclick="setLanguage('es')">ES</button>
-                </div>
-                <input type="checkbox" class="checkbox" id="checkbox">
-                <label for="checkbox" class="checkbox-label">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                    <span class="ball"></span>
-                </label>
-            </div>
-
-            <a href="javascript:void(0);" class="icon" onclick="ResponsiveNav()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </nav>
+        <div id="nav-placeholder"></div>
 
         <div class="main top">
-            <blockquote>
-                <p lang="en">What we have done for ourselves alone dies with us; what we have done for others and the world remains and is immortal.</p>
-                <p lang="es">Lo que hemos hecho solo para nosotros mismos muere con nosotros; lo que hemos hecho por los demás y por el mundo permanece y es inmortal.</p>
-                <footer>— <cite>Albert Pike</cite></footer>
-            </blockquote>
+            <blockquote id="quote-block"></blockquote>
         </div>
 
         <div class="main content ct-content">

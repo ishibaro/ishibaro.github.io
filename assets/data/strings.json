@@ -1,0 +1,480 @@
+{
+  "nav": {
+    "home": {
+      "en": "Home",
+      "es": "Inicio"
+    },
+    "services": {
+      "en": "Services",
+      "es": "Servicios"
+    },
+    "profile": {
+      "en": "Profile",
+      "es": "Perfil"
+    },
+    "portfolio": {
+      "en": "Portfolio",
+      "es": "Portafolio"
+    },
+    "contact": {
+      "en": "Contact",
+      "es": "Contacto"
+    },
+    "store": {
+      "en": "Store",
+      "es": "Tienda"
+    }
+  },
+  "index": {
+    "eyebrow": {
+      "en": "Israel Hinojosa Baliño · Durham, UK",
+      "es": "Israel Hinojosa Baliño · Durham, UK"
+    },
+    "title": {
+      "en": "Archaeologist.<br>Spatial analyst.<br>Developer.",
+      "es": "Arqueólogo.<br>Analista espacial.<br>Desarrollador."
+    },
+    "sub": {
+      "en": "I study how societies organise space to survive dynamic landscapes — then I write the code to visualise it.",
+      "es": "Investigo cómo las sociedades organizan el espacio para sobrevivir en paisajes dinámicos — y luego escribo el código para visualizarlo."
+    },
+    "pill_msca": {
+      "en": "MSCA Seal of Excellence 2026",
+      "es": "Sello de Excelencia MSCA 2026"
+    },
+    "cta_profile": {
+      "en": "View profile",
+      "es": "Ver perfil"
+    },
+    "cta_portfolio": {
+      "en": "Portfolio →",
+      "es": "Portafolio →"
+    }
+  },
+  "profile": {
+    "eyebrow": {
+      "en": "Israel Hinojosa Baliño · aka Ishiba Ro · he/him",
+      "es": "Israel Hinojosa Baliño · aka Ishiba Ro · él"
+    },
+    "title": {
+      "en": "Archaeologist, spatial analyst,<br>and occasional saxophonist.",
+      "es": "Arqueólogo, analista espacial<br>y saxofonista ocasional."
+    },
+    "sub": {
+      "en": "Mexican archaeologist specialising in landscape archaeology, socio-spatial organisation, and long-term settlement persistence. I study how communities inhabit and stabilise dynamic environments — river deltas, wetlands, mountainous landscapes — and I build the tools to visualise it.",
+      "es": "Arqueólogo mexicano especializado en arqueología del paisaje, organización socio-espacial y persistencia urbana a largo plazo. Investigo cómo las comunidades habitan y estabilizan entornos dinámicos — deltas fluviales, humedales, paisajes montañosos — y construyo las herramientas para visualizarlo."
+    },
+    "pill_phd": {
+      "en": "PhD · Durham University",
+      "es": "PhD · Durham University"
+    },
+    "pill_msc": {
+      "en": "MSc GIS · UCL",
+      "es": "MSc GIS · UCL"
+    },
+    "pill_lic": {
+      "en": "Lic. · ENAH Mexico",
+      "es": "Lic. · ENAH México"
+    },
+    "pill_dev": {
+      "en": "Software Developer · JustIT",
+      "es": "Desarrollador de Software · JustIT"
+    },
+    "pill_msca": {
+      "en": "MSCA Seal of Excellence 2026",
+      "es": "Sello de Excelencia MSCA 2026"
+    },
+    "pill_os": {
+      "en": "Open Source",
+      "es": "Código abierto"
+    },
+    "s1_label": {
+      "en": "Research focus",
+      "es": "Investigación"
+    },
+    "s1_title": {
+      "en": "How cities survive dynamic landscapes",
+      "es": "Cómo sobreviven las ciudades en paisajes dinámicos"
+    },
+    "s1_p1": {
+      "en": "My doctoral research at Durham University examined four millennia of settlement trajectories in the north-central Nile Delta. The central question: to what extent were changes in settlement patterns driven by environmental dynamics, and to what extent by socio-political decision-making?",
+      "es": "Mi investigación doctoral en la Universidad de Durham analizó cuatro milenios de trayectorias de asentamiento en la región norte-central del Delta del Nilo. La pregunta central: ¿en qué medida los cambios en los patrones de asentamiento respondían a dinámicas ambientales y en qué medida a decisiones sociopolíticas?"
+    },
+    "s1_p2": {
+      "en": "The project integrated archaeological data from the Egyptian Exploration Society's Delta Survey with geomorphological datasets within a spatio-temporal GIS framework. Through reconstruction of a palimpsestual river network and analysis of settlement persistence across multiple chronological phases, it explored how communities negotiated the shifting hydrological and sedimentary conditions of deltaic environments.",
+      "es": "El proyecto integró datos arqueológicos del Delta Survey de la Egyptian Exploration Society con datos geomorfológicos e históricos dentro de un marco SIG espacio-temporal. A través de la reconstrucción de una red fluvial palimpséstica y el análisis de la persistencia del asentamiento en múltiples fases cronológicas, exploré cómo las comunidades negociaron las condiciones hidrológicas y sedimentarias cambiantes propias de los entornos deltaicos."
+    },
+    "s2_label": {
+      "en": "Research trajectory",
+      "es": "Trayectoria"
+    },
+    "s2_title": {
+      "en": "From Tenochtitlan to the Yangtze Delta",
+      "es": "De Tenochtitlan al Delta del Yangtsé"
+    },
+    "s2_p1": {
+      "en": "My earliest work examined the transformation of urban space after the Spanish conquest of Tenochtitlan. My MSc at UCL modelled the political organisation of the Tlapa-Tlachinollan altepetl in Guerrero, Mexico, using visibility analysis, network modelling, and cost-surface simulations.",
+      "es": "Mi trabajo temprano examinó la transformación del espacio urbano tras la conquista española de Tenochtitlan. Mi MSc en UCL modeló la organización política del altepetl de Tlapa-Tlachinollan en Guerrero, México, usando análisis de visibilidad, modelado de redes y simulaciones de superficie de costo."
+    },
+    "s2_p2": {
+      "en": "In 2026, this line of research earned a Seal of Excellence from the European Commission's Marie Skłodowska-Curie Actions (score: 93.60%), for a project extending this work from the Nile Valley to the Horn of Africa.",
+      "es": "En 2026, esta línea de investigación obtuvo el Sello de Excelencia de la Comisión Europea en la convocatoria Marie Skłodowska-Curie Actions (puntuación: 93,60%), por un proyecto que extiende este trabajo desde el Valle del Nilo hasta el Cuerno de África."
+    },
+    "s3_label": {
+      "en": "Field experience",
+      "es": "Trabajo de campo"
+    },
+    "s3_title": {
+      "en": "Excavations and surveys across three continents",
+      "es": "Excavaciones y reconocimientos en tres continentes"
+    },
+    "s3_p1": {
+      "en": "I have worked on archaeological projects in Mexico (Sinaloa, Chiapas, Guerrero, Teotihuacan), Egypt (Nile Delta survey, Kafr el-Sheikh and Beheira governorates), Kuwait (Failaka Island), Iraqi Kurdistan, and the United States. Roles have ranged from excavation and drone-based topographic survey to GIS database design and field direction.",
+      "es": "He trabajado en proyectos arqueológicos en México (Sinaloa, Chiapas, Guerrero, Teotihuacan), Egipto (Delta del Nilo, provincias de Kafr el-Sheikh y Beheira), Kuwait (Isla Failaka), el Kurdistán iraquí y los Estados Unidos. Mis roles han incluido excavación, reconocimiento topográfico con dron, diseño de bases de datos SIG y dirección de campo."
+    },
+    "s4_label": {
+      "en": "Technical practice",
+      "es": "Práctica técnica"
+    },
+    "s4_title": {
+      "en": "Open-source tools for spatial problems",
+      "es": "Herramientas de código abierto para problemas espaciales"
+    },
+    "s4_p1": {
+      "en": "Formally trained as a Software Developer (JustIT / North East Combined Authority, 2025), my stack spans Python, R, JavaScript, C#, PostgreSQL, PHP, and QGIS. I build tools that bridge fieldwork and data science: spatial databases, web maps, visualisations, and QGIS plug-ins.",
+      "es": "Formado como Desarrollador de Software (JustIT / North East Combined Authority, 2025), mi stack incluye Python, R, JavaScript, C#, PostgreSQL, PHP y QGIS. Construyo herramientas que conectan el trabajo de campo con la ciencia de datos: bases de datos espaciales, mapas web, visualizaciones y plugins para QGIS."
+    },
+    "s5_label": {
+      "en": "Selected publications",
+      "es": "Publicaciones seleccionadas"
+    },
+    "s5_title": {
+      "en": "8 journal articles, 7 book chapters, and counting",
+      "es": "8 artículos, 7 capítulos de libro, y más"
+    },
+    "s6_label": {
+      "en": "Languages",
+      "es": "Idiomas"
+    },
+    "s6_title": {
+      "en": "Six languages, two scripts",
+      "es": "Seis idiomas, dos alfabetos"
+    },
+    "s7_label": {
+      "en": "Origin layer",
+      "es": "Capa de origen"
+    },
+    "s7_title": {
+      "en": "From Iztapalapa and Neza",
+      "es": "De Iztapalapa y Neza"
+    },
+    "s7_p1": {
+      "en": "Pickled pork rinds seller, mechanic's assistant, vblogger, music lover, yo-yo player. PhD, MSc and <em>Licenciado</em> in archaeology. Sometimes I play the sax. I would like to learn how to fly, and this is the same reason I would like to be a medical doctor.",
+      "es": "Vendedor de cueritos, ayudante de mecánico, vbloguero, melómano, yoyero. PhD, Maestro en Ciencias y Licenciado en arqueología. A veces toco el saxofón. Quiero aprender a volar y por esto mismo quisiera ser médico."
+    },
+    "s7_quote": {
+      "en": "\"I like to think that I am good at solving practical issues.\"",
+      "es": "\"Me gusta pensar que soy bueno resolviendo problemas prácticos.\""
+    }
+  },
+  "services": {
+    "eyebrow": {
+      "en": "Archaeological consultant · Freelance",
+      "es": "Consultor en arqueología · Freelance"
+    },
+    "title": {
+      "en": "Fieldwork, spatial data,<br>and research code.",
+      "es": "Trabajo de campo, datos espaciales<br>y código para investigación."
+    },
+    "sub": {
+      "en": "I work with research teams, heritage projects, and institutions that need accurate spatial data, robust analysis pipelines, or field documentation they can actually trust. Not a generalist agency — a specialist who has done this on real projects, in real conditions, across three continents.",
+      "es": "Trabajo con equipos de investigación, proyectos de patrimonio e instituciones que necesitan datos espaciales precisos, pipelines de análisis robustos, o documentación de campo en la que puedan confiar. No soy una agencia generalista — soy un especialista que ha hecho esto en proyectos reales, en condiciones reales, en tres continentes."
+    },
+    "s1_label": {
+      "en": "In the field",
+      "es": "En el campo"
+    },
+    "s1_title": {
+      "en": "Topographic & archaeological survey",
+      "es": "Levantamiento topográfico y arqueológico"
+    },
+    "s1_p1": {
+      "en": "Total station survey, GPS data collection, drone-based photogrammetry, and aerial reconnaissance using UAVs. I've directed field documentation at Teotihuacan, in the Nile Delta, on Failaka Island (Kuwait), and across Sinaloa and Chiapas.",
+      "es": "Levantamiento con estación total, recolección de datos GPS, fotogrametría con dron y reconocimiento aéreo con UAV. He dirigido documentación de campo en Teotihuacan, el Delta del Nilo, la Isla Failaka (Kuwait) y en Sinaloa y Chiapas."
+    },
+    "s2_label": {
+      "en": "Spatial analysis",
+      "es": "Análisis espacial"
+    },
+    "s2_title": {
+      "en": "GIS, mapping & spatial modelling",
+      "es": "SIG, cartografía y modelado espacial"
+    },
+    "s2_p1": {
+      "en": "Spatio-temporal GIS databases, landscape analysis, visibility modelling, least-cost paths, network modelling, and cost-surface simulations. Platform-agnostic: QGIS, ArcGIS, ArcGIS Online (Story Maps, Experience Builder, Survey123, QuickCapture), and MerginMaps.",
+      "es": "Bases de datos SIG espacio-temporales, análisis de paisaje, modelado de visibilidad, rutas de menor costo, modelado de redes y simulaciones de superficie de costo. Sin dependencia de plataforma: QGIS, ArcGIS, ArcGIS Online y MerginMaps."
+    },
+    "s3_label": {
+      "en": "Research code",
+      "es": "Código para investigación"
+    },
+    "s3_title": {
+      "en": "Data analysis & scripting",
+      "es": "Análisis de datos y scripting"
+    },
+    "s3_p1": {
+      "en": "Python and R scripts for archaeological and spatial data analysis — cleaning, modelling, visualisation, and publication-quality figures. SQL databases (PostgreSQL, SQLite, GeoPackage, Access) designed for long-term research use. Web mapping with JavaScript and Mapbox GL JS.",
+      "es": "Scripts en Python y R para análisis de datos arqueológicos y espaciales. Bases de datos SQL (PostgreSQL, SQLite, GeoPackage, Access) diseñadas para uso de investigación a largo plazo. Cartografía web con JavaScript y Mapbox GL JS."
+    },
+    "s4_label": {
+      "en": "Training",
+      "es": "Formación"
+    },
+    "s4_title": {
+      "en": "Workshops & teaching",
+      "es": "Talleres y docencia"
+    },
+    "s4_p1": {
+      "en": "Hands-on workshops in GIS/QGIS, topographic survey, photogrammetry, and remote sensing — delivered at universities and field schools in Mexico, the UK, Kazakhstan, and Iraq. Tailored for archaeologists, not software engineers.",
+      "es": "Talleres prácticos de SIG/QGIS, levantamiento topográfico, fotogrametría y teledetección — impartidos en universidades y escuelas de campo en México, Reino Unido, Kazajistán e Irak. Diseñados para arqueólogos, no para ingenieros de software."
+    },
+    "cta_p": {
+      "en": "Interested in working together?",
+      "es": "¿Interesado en colaborar?"
+    },
+    "cta_btn": {
+      "en": "Get in touch →",
+      "es": "Escríbeme →"
+    }
+  },
+  "contact": {
+    "eyebrow": {
+      "en": "Israel Hinojosa Baliño · Durham, UK",
+      "es": "Israel Hinojosa Baliño · Durham, UK"
+    },
+    "title": {
+      "en": "Get in touch",
+      "es": "Escríbeme"
+    },
+    "sub": {
+      "en": "Researcher, developer, collaborator. If you have a project, a question, or just want to say hello — I'm reachable through any of the channels below.",
+      "es": "Investigador, desarrollador, colaborador. Si tienes un proyecto, una pregunta, o simplemente quieres saludar — puedes encontrarme en cualquiera de los canales de abajo."
+    },
+    "lbl_email": {
+      "en": "Email",
+      "es": "Correo"
+    },
+    "lbl_phone": {
+      "en": "Phone",
+      "es": "Teléfono"
+    },
+    "lbl_cv": {
+      "en": "Academic CV",
+      "es": "CV Académico"
+    },
+    "lbl_social": {
+      "en": "Social & code",
+      "es": "Redes y código"
+    },
+    "lbl_ghpages": {
+      "en": "GitHub Pages",
+      "es": "Sitio GitHub"
+    }
+  },
+  "store": {
+    "eyebrow": {
+      "en": "Books · Apps · Research",
+      "es": "Libros · Apps · Investigación"
+    },
+    "title": {
+      "en": "Store & downloads",
+      "es": "Tienda y descargas"
+    },
+    "sub": {
+      "en": "Books, software, and research outputs — some free, some not.",
+      "es": "Libros, software y productos de investigación — algunos gratis, otros no."
+    },
+    "cat_books": {
+      "en": "Books",
+      "es": "Libros"
+    },
+    "cat_apps": {
+      "en": "Apps",
+      "es": "Aplicaciones"
+    },
+    "cat_research": {
+      "en": "Research",
+      "es": "Investigación"
+    },
+    "btn_buy": {
+      "en": "Buy",
+      "es": "Comprar"
+    },
+    "btn_download": {
+      "en": "Download",
+      "es": "Descargar"
+    },
+    "btn_kindle": {
+      "en": "Kindle",
+      "es": "Kindle"
+    },
+    "btn_amazon": {
+      "en": "Amazon",
+      "es": "Amazon"
+    },
+    "btn_ingram": {
+      "en": "IngramSpark",
+      "es": "IngramSpark"
+    },
+    "btn_view": {
+      "en": "View",
+      "es": "Ver"
+    },
+    "free_badge": {
+      "en": "Free",
+      "es": "Gratis"
+    }
+  },
+  "footer": {
+    "tagline": {
+      "en": "Enjoy!",
+      "es": "¡Disfruta!"
+    }
+  },
+  "bottom_tags": {
+    "archaeology": {
+      "en": "Archaeology",
+      "es": "Arqueología"
+    },
+    "software": {
+      "en": "Software development",
+      "es": "Desarrollo de software"
+    },
+    "data": {
+      "en": "Data analysis",
+      "es": "Análisis de datos"
+    }
+  },
+  "portfolio": {
+    "title": {
+      "en": "Portfolio",
+      "es": "Portafolio"
+    },
+    "c1_tag": {
+      "en": "Show Corona CAST by click",
+      "es": "Mostrar Corona CAST con un clic"
+    },
+    "c1_title": {
+      "en": "QGIS plug-in",
+      "es": "Complemento de QGIS"
+    },
+    "c1_link": {
+      "en": "View",
+      "es": "Ver"
+    },
+    "c2_tag": {
+      "en": "🌄 Generate Relative Elevation Model (REM)",
+      "es": "🌄 Genera un Modelo Relativo de Elevación (MRE)"
+    },
+    "c2_title": {
+      "en": "QGIS plug-in",
+      "es": "Complemento de QGIS"
+    },
+    "c2_link": {
+      "en": "View",
+      "es": "Ver"
+    },
+    "c3_tag": {
+      "en": "Cartography · Mapbox",
+      "es": "Cartografía · Mapbox"
+    },
+    "c3_title": {
+      "en": "Custom tileset mapping",
+      "es": "Mapa con tileset personalizado"
+    },
+    "c3_p": {
+      "en": "3D visualization using proprietary spatial datasets, featuring dynamic time-of-day lighting configurations.",
+      "es": "Visualización 3D con datos espaciales propios, iluminación dinámica según hora del día."
+    },
+    "c4_tag": {
+      "en": "Data Viz · Covid-19",
+      "es": "Visualización · Covid-19"
+    },
+    "c4_title": {
+      "en": "Flattening the curve",
+      "es": "Aplanando la curva"
+    },
+    "c4_link": {
+      "en": "View",
+      "es": "Ver"
+    },
+    "c5_tag": {
+      "en": "Data · Mexico 2022",
+      "es": "Datos · México 2022"
+    },
+    "c5_title": {
+      "en": "Earthquakes in Mexico",
+      "es": "Sismos en México"
+    },
+    "c5_p": {
+      "en": "Interactive dynamic reporting of seismic activity with temporal mapping elements.",
+      "es": "Reporte interactivo de actividad sísmica con visualización temporal."
+    },
+    "c5_link": {
+      "en": "View project",
+      "es": "Ver proyecto"
+    },
+    "c6_tag": {
+      "en": "Backend · PostgreSQL",
+      "es": "Backend · PostgreSQL"
+    },
+    "c6_title": {
+      "en": "Temporal database",
+      "es": "Base de datos temporal"
+    },
+    "c6_link": {
+      "en": "View project",
+      "es": "Ver proyecto"
+    },
+    "c7_tag": {
+      "en": "Cartography · 30 days",
+      "es": "Cartografía · 30 días"
+    },
+    "c7_title": {
+      "en": "#30DayMapChallenge",
+      "es": "#30DayMapChallenge"
+    },
+    "c7_p": {
+      "en": "Complete 2021 collection.",
+      "es": "Colección completa 2021."
+    },
+    "c7_link": {
+      "en": "View gallery",
+      "es": "Ver galería"
+    },
+    "c8_tag": {
+      "en": "Mobile · Archaeology",
+      "es": "Móvil · Arqueología"
+    },
+    "c8_title": {
+      "en": "ArKalc",
+      "es": "ArKalc"
+    },
+    "c8_p": {
+      "en": "Grid hypotenuses, celestial coordinates and compass bearings for fieldwork.",
+      "es": "Hipotenusa para cuadrículas, coordenadas celestes y rumbo de brújula para trabajo de campo."
+    },
+    "c9_tag": {
+      "en": "Stratigraphy",
+      "es": "Estratigrafía"
+    },
+    "c9_title": {
+      "en": "Harris Matrix Builder",
+      "es": "Harris Matrix Builder"
+    },
+    "c9_link": {
+      "en": "Open",
+      "es": "Abrir"
+    }
+  }
+}

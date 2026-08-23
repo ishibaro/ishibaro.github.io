@@ -1,0 +1,102 @@
+/* ============================================
+   nav.css — Navigation styles
+   Replaces old topnav floats + nav-fix.css
+   ============================================ */
+
+.topnav {
+  background: var(--color-purple-primary);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  overflow: visible;
+}
+
+.topnav a {
+  float: none !important;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px 8px 0 0;
+  margin-right: 0.5px;
+  transition: background 0.3s;
+  background: var(--color-purple-dark);
+  color: #f0f0f0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+  z-index: 99;
+}
+
+.topnav a:hover  { background: rgb(245,207,255); color: #1a1a2e; }
+.topnav a.active { background: var(--color-purple-primary); font-weight: 600; }
+
+/* Contact link pushes to the right */
+#yellow { margin-left: auto; }
+
+/* Controls container (lang + theme toggle) */
+.nav-controls-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 14px;
+  flex-shrink: 0;
+  background: var(--color-purple-primary);
+}
+
+/* Hamburger: hidden on desktop */
+.topnav .icon { display: none !important; }
+
+/* ── Mobile (≤600px) ── */
+@media screen and (max-width: 600px) {
+  .topnav {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  /* Hide all links except first (active page) */
+  .topnav a:not(:first-child):not(.icon) { display: none; }
+
+  /* Hide controls when menu is closed */
+  .topnav .nav-controls-item { display: none; }
+
+  /* Show hamburger */
+  .topnav .icon {
+    display: flex !important;
+    align-items: center;
+    margin-left: auto;
+    background: var(--color-purple-dark);
+    float: none !important;
+  }
+
+  /* Open state */
+  .topnav.responsive {
+    position: sticky;
+  }
+
+  .topnav.responsive a:not(.icon) {
+    display: flex !important;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* Controls visible when open */
+  .topnav.responsive .nav-controls-item {
+    display: flex !important;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+}
